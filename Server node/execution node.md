@@ -69,1228 +69,1195 @@ Có thể dùng [Break Loop] để kết thúc quá trình lặp sớm. Sau khi 
 | Input Parameter (Đầu vào) | Loop End Value (Giá trị Kết thúc) | Integer (Số nguyên) | Vòng lặp bao gồm cả giá trị này |
 | Output Parameter (Đầu ra) | Current Loop Value (Giá trị vòng lặp hiện tại) | Integer (Số nguyên) | Giá trị nguyên của vòng lặp hiện tại đang được thực thi |
 
-## **5. Forwarding Event**
+## **5. Forwarding Event (Chuyển tiếp Sự kiện)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Forwards the source event of this Node's Execution Flow to the specified Target Entity. The event with the same name on the Target Entity's Node Graph will be triggered
+Chuyển tiếp sự kiện nguồn của Luồng Thực thi (Execution Flow) của Node này đến Thực thể Mục tiêu (Target Entity) được chỉ định. Sự kiện có cùng tên trên Node Graph của Thực thể Mục tiêu sẽ được kích hoạt.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Target Entity | Entity | Target entity being forwarded |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Target Entity (Thực thể Mục tiêu) | Entity (Thực thể) | Thực thể mục tiêu đang được chuyển tiếp |
 
-# II. List Operations
+# II. List Operations (Các thao tác với Danh sách)
 
-## **1. Insert Value Into List**
+## **1. Insert Value Into List (Chèn Giá trị vào Danh sách)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Insert a value at the specified ID Location in the specified List. The inserted value appears at that ID after insertion
+Chèn một giá trị tại Vị trí ID được chỉ định trong Danh sách đã chọn. Giá trị được chèn sẽ xuất hiện tại ID đó sau khi chèn.
 
-For example: Inserting 5 at ID 2 in the List [1, 2, 3, 4] results in [1, 2, 5, 3, 4] (5 appears at ID 2)
+Ví dụ: Chèn 5 tại ID 2 trong Danh sách [1, 2, 3, 4] sẽ tạo ra [1, 2, 5, 3, 4] (5 xuất hiện tại ID 2).
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | List | Generic | Reference to the list being inserted |
-| Input Parameter | Insert ID | Integer | ID of the inserted value (after insertion) |
-| Input Parameter | Insert Value | Generic | Value to be inserted |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | List (Danh sách) | Generic (Chung) | Tham chiếu đến danh sách đang được chèn |
+| Input Parameter (Đầu vào) | Insert ID (ID Chèn) | Integer (Số nguyên) | ID của giá trị được chèn (sau khi chèn) |
+| Input Parameter (Đầu vào) | Insert Value (Giá trị Chèn) | Generic (Chung) | Giá trị cần chèn |
 
-## **2.** Set List Value
+## **2.** Set List Value (Cài đặt Giá trị Danh sách)
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Sets the value at a specified index position in a specified list.
+Thiết lập giá trị tại một vị trí chỉ mục được chỉ định trong danh sách đã chọn.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | List | Generic | Edited list reference |
-| Input Parameter | ID | Integer | ID of edited value |
-| Input Parameter | Value | Generic | Edited Value |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | List (Danh sách) | Generic (Chung) | Tham chiếu danh sách đã chỉnh sửa |
+| Input Parameter (Đầu vào) | ID | Integer (Số nguyên) | ID của giá trị được chỉnh sửa |
+| Input Parameter (Đầu vào) | Value (Giá trị) | Generic (Chung) | Giá trị đã chỉnh sửa |
 
-## **3. Remove Value From List**
+## **3. Remove Value From List (Xóa Giá trị khỏi Danh sách)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Remove the value at the specified ID Location from the specified List. All subsequent values shift forward by one position
+Xóa giá trị tại Vị trí ID được chỉ định khỏi Danh sách đã chọn. Tất cả các giá trị phía sau sẽ dịch chuyển lên trước một vị trí.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | List | Generic | Reference to the list of values to remove |
-| Input Parameter | Remove ID | Integer | ID to remove |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | List (Danh sách) | Generic (Chung) | Tham chiếu đến danh sách các giá trị cần xóa |
+| Input Parameter (Đầu vào) | Remove ID (ID Xóa) | Integer (Số nguyên) | ID cần xóa |
 
-## **4. List Iteration Loop**
+## **4. List Iteration Loop (Vòng lặp Duyệt Danh sách)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Iterate through the specified List in sequential order
+Lặp qua Danh sách được chỉ định theo thứ tự tuần tự.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Iteration List | Generic | List to iterate through |
-| Output Parameter | Iteration Value | Generic | Each value in the list |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Iteration List (Danh sách Lặp) | Generic (Chung) | Danh sách để lặp qua |
+| Output Parameter (Đầu ra) | Iteration Value (Giá trị Lặp) | Generic (Chung) | Mỗi giá trị trong danh sách |
 
-## **5. List Sorting**
+## **5. List Sorting (Sắp xếp Danh sách)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Sort the specified List according to the chosen sort method
+Sắp xếp Danh sách được chỉ định theo phương pháp sắp xếp đã chọn.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | List | Generic | Integer List or Floating Point Number List |
-| Input Parameter | Sort By | Enumeration | Ascending or Descending |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | List (Danh sách) | Generic (Chung) | Danh sách Số nguyên hoặc Danh sách Số thực |
+| Input Parameter (Đầu vào) | Sort By (Sắp xếp theo) | Enumeration (Liệt kê) | Tăng dần (Ascending) hoặc Giảm dần (Descending) |
 
-## **6. Concatenate List**
+## **6. Concatenate List (Nối Danh sách)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Append the input List to the end of the Target List. For example, Target List [1, 2, 3] with input [4, 5] becomes [1, 2, 3, 4, 5] after execution
+Nối Danh sách đầu vào vào cuối Danh sách Mục tiêu. Ví dụ: Danh sách Mục tiêu [1, 2, 3] với đầu vào [4, 5] trở thành [1, 2, 3, 4, 5] sau khi thực thi.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Target List | Generic | List being input |
-| Input Parameter | Input List | Generic | The input list will be added to the end of the Target list |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Target List (Danh sách Mục tiêu) | Generic (Chung) | Danh sách đang được nhập vào |
+| Input Parameter (Đầu vào) | Input List (Danh sách Đầu vào) | Generic (Chung) | Danh sách đầu vào sẽ được thêm vào cuối Danh sách Mục tiêu |
 
-## **7. Clear List**
+## **7. Clear List (Xóa sạch Danh sách)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Clear the specified List
+Làm trống Danh sách được chỉ định.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | List | Generic | List to be cleared |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | List (Danh sách) | Generic (Chung) | Danh sách cần làm trống |
 
-# III. Custom Variables
+# III. Custom Variables (Biến Tùy Chỉnh)
 
-## **1. Set Node Graph Variable**
+## **1. Set Node Graph Variable (Cài đặt Biến Node Graph)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Set the value of the specified Node Graph Variable in the current Node Graph
+Thiết lập giá trị của Biến Node Graph được chỉ định trong Node Graph hiện tại.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Variable Name | String | Name of the Node Graph Variable. Must be unique within the same Node Graph |
-| Input Parameter | Variable Value | Generic | Value assigned to this variable |
-| Input Parameter | Trigger Event | Boolean | Default: True. If set to False, this Node Graph Variable editing will not trigger the Variable Change Event |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Variable Name (Tên Biến) | String (Chuỗi) | Tên của Biến Node Graph. Phải là duy nhất trong cùng một Node Graph |
+| Input Parameter (Đầu vào) | Variable Value (Giá trị Biến) | Generic (Chung) | Giá trị được gán cho biến này |
+| Input Parameter (Đầu vào) | Trigger Event (Kích hoạt Sự kiện) | Boolean (Logic) | Mặc định: True. Nếu đặt thành False, việc chỉnh sửa Biến Node Graph này sẽ không kích hoạt Sự kiện Thay đổi Biến |
 
-## **2. Set Custom Variable**
+## **2. Set Custom Variable (Cài đặt Biến Tùy Chỉnh)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Set the value of the specified Custom Variable on the Target Entity
+Thiết lập giá trị của Biến Tùy chỉnh được chỉ định trên Thực thể Mục tiêu.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Target Entity | Entity | The variable is mounted on this entity |
-| Input Parameter | Variable Name | String | Custom variable name. Must be unique |
-| Input Parameter | Variable Value | Generic | Value assigned to this variable |
-| Input Parameter | Trigger Event | Boolean | Default: True. When set to False, this custom variable editing will not trigger the On Custom Variable Change event |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Target Entity (Thực thể Mục tiêu) | Entity (Thực thể) | Biến được gắn vào thực thể này |
+| Input Parameter (Đầu vào) | Variable Name (Tên Biến) | String (Chuỗi) | Tên biến tùy chỉnh. Phải là duy nhất |
+| Input Parameter (Đầu vào) | Variable Value (Giá trị Biến) | Generic (Chung) | Giá trị được gán cho biến này |
+| Input Parameter (Đầu vào) | Trigger Event (Kích hoạt Sự kiện) | Boolean (Logic) | Mặc định: True. Khi đặt thành False, việc chỉnh sửa biến tùy chỉnh này sẽ không kích hoạt sự kiện Khi Biến Tùy chỉnh Thay đổi (On Custom Variable Change) |
 
-# IV. Preset Status
+# IV. Preset Status (Trạng thái Được Lập trình Sẵn)
 
-## **1. Set Preset Status**
+## **1. Set Preset Status (Cài đặt Trạng thái Được Lập trình Sẵn)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Set the Preset Status of the specified Target Entity
+Thiết lập Trạng thái Được Lập trình Sẵn của Thực thể Mục tiêu được chỉ định.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Target Entity | Entity | Preset Status set for the entity |
-| Input Parameter | Preset Status Index | Integer | The unique identifier for the Preset Status |
-| Input Parameter | Preset Status Value | Integer | Generally "0" for off, "1" for on |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Target Entity (Thực thể Mục tiêu) | Entity (Thực thể) | Trạng thái Được Lập trình Sẵn được thiết lập cho thực thể |
+| Input Parameter (Đầu vào) | Preset Status Index (Chỉ số Trạng thái) | Integer (Số nguyên) | Mã định danh duy nhất cho Trạng thái Được Lập trình Sẵn |
+| Input Parameter (Đầu vào) | Preset Status Value (Giá trị Trạng thái) | Integer (Số nguyên) | Thường là "0" để tắt, "1" để bật |
 
-# V. Entity Related
+# V. Entity Related (Liên quan đến Thực thể)
 
-## **1. Create Entity**
+## **1. Create Entity (Tạo Thực thể)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Create an Entity by GUID. The Entity must be pre-placed in the Scene
+Tạo một Thực thể bằng GUID. Thực thể phải được đặt trước trong Cảnh (Scene).
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Target GUID | GUID | Identifier for this entity |
-| Input Parameter | Unit Tag Index List | Integer List | Determines the Unit Tags carried when this entity is created |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Target GUID (GUID Mục tiêu) | GUID | Mã định danh cho thực thể này |
+| Input Parameter (Đầu vào) | Unit Tag Index List (Danh sách Chỉ số Thẻ Đơn vị) | Integer List (Danh sách Số nguyên) | Quyết định các Thẻ Đơn vị (Unit Tags) được mang theo khi thực thể này được tạo |
 
-## **2. Create Prefab**
+## **2. Create Prefab (Tạo Prefab)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Create an Entity by Prefab ID
+Tạo một Thực thể bằng Prefab ID.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Prefab ID | Prefab ID | Identifier for this Prefab |
-| Input Parameter | Location | 3D Vector | Absolute Location |
-| Input Parameter | Rotate | 3D Vector | Absolute Rotation |
-| Input Parameter | Owner Entity | Entity | Determines whether the created entity belongs to another entity |
-| Input Parameter | Overwrite Level | Boolean | When set to False, the [Level] parameter has no effect |
-| Input Parameter | Level | Integer | Determines the Level when the entity is created |
-| Input Parameter | Unit Tag Index List | Integer List | Determines the Unit Tags carried when this entity is created |
-| Output Parameter | Created Entity | Entity | Entities created in this way do not have a GUID |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Prefab ID | Prefab ID | Mã định danh cho Prefab này |
+| Input Parameter (Đầu vào) | Location (Vị trí) | 3D Vector | Vị trí tuyệt đối |
+| Input Parameter (Đầu vào) | Rotate (Góc quay) | 3D Vector | Góc quay tuyệt đối |
+| Input Parameter (Đầu vào) | Owner Entity (Thực thể Sở hữu) | Entity (Thực thể) | Quyết định xem thực thể được tạo ra có thuộc về một thực thể khác hay không |
+| Input Parameter (Đầu vào) | Overwrite Level (Ghi đè Cấp độ) | Boolean (Logic) | Khi đặt thành False, tham số [Level] không có tác dụng |
+| Input Parameter (Đầu vào) | Level (Cấp độ) | Integer (Số nguyên) | Quyết định Cấp độ khi thực thể được tạo |
+| Input Parameter (Đầu vào) | Unit Tag Index List (Danh sách Chỉ số Thẻ Đơn vị) | Integer List (Danh sách Số nguyên) | Quyết định các Thẻ Đơn vị (Unit Tags) được mang theo khi thực thể này được tạo |
+| Output Parameter (Đầu ra) | Created Entity (Thực thể được tạo) | Entity (Thực thể) | Các thực thể được tạo theo cách này không có GUID |
 
-## 3. Create Prefab Group
+## 3. Create Prefab Group (Tạo Nhóm Prefab)
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Create the Entities contained in the Prefab Group by Prefab Group ID
+Tạo các Thực thể có trong Nhóm Prefab bằng ID Nhóm Prefab.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
-| Parameter Type | Parameter Name | Type | Description |
+| Parameter Type (Loại) | Parameter Name (Tên tham số) | Type (Kiểu dữ liệu) | Description (Mô tả) |
 | --- | --- | --- | --- |
-| Input Parameter | Prefab Group ID | Integer | Identifier for this Prefab Group |
-| Input Parameter | Location | 3D Vector | Absolute Location of the Prefab Group center |
-| Input Parameter | Rotate | 3D Vector | Absolute Rotation of the Prefab Group center |
-| Input Parameter | Owner Entity | Entity | Determines whether the entity belongs to another entity after creation |
-| Input Parameter | Level | Integer | Determines the Level when the entity is created |
-| Input Parameter | Unit Tag Index List | Integer List | Determines the Unit Tags carried when the entity is created |
-| Input Parameter | Overwrite Level | Boolean | When set to False, the [Level] parameter has no effect |
-| Output Parameter | Created Entity List | Entity List | Entities created in this way do not have a GUID |
+| Input Parameter (Đầu vào) | Prefab Group ID (ID Nhóm Prefab) | Integer (Số nguyên) | Mã định danh cho Nhóm Prefab này |
+| Input Parameter (Đầu vào) | Location (Vị trí) | 3D Vector | Vị trí tuyệt đối của trung tâm Nhóm Prefab |
+| Input Parameter (Đầu vào) | Rotate (Góc quay) | 3D Vector | Góc quay tuyệt đối của trung tâm Nhóm Prefab |
+| Input Parameter (Đầu vào) | Owner Entity (Thực thể Sở hữu) | Entity (Thực thể) | Quyết định xem thực thể có thuộc về một thực thể khác sau khi tạo hay không |
+| Input Parameter (Đầu vào) | Level (Cấp độ) | Integer (Số nguyên) | Quyết định Cấp độ khi thực thể được tạo |
+| Input Parameter (Đầu vào) | Unit Tag Index List (Danh sách Chỉ số Thẻ Đơn vị) | Integer List (Danh sách Số nguyên) | Quyết định các Thẻ Đơn vị (Unit Tags) được mang theo khi thực thể được tạo |
+| Input Parameter (Đầu vào) | Overwrite Level (Ghi đè Cấp độ) | Boolean (Logic) | Khi đặt thành False, tham số [Level] không có tác dụng |
+| Output Parameter (Đầu ra) | Created Entity List (Danh sách Thực thể được tạo) | Entity List (Danh sách Thực thể) | Các thực thể được tạo theo cách này không có GUID |
 
-## **4. Activate/Disable Model Display**
+## **4. Activate/Disable Model Display (Kích hoạt/Vô hiệu hóa Hiển thị Mô hình)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Edit the Entity's Model Visibility attribute to make its Model visible or hidden
+Chỉnh sửa thuộc tính Hiển thị Mô hình của Thực thể để làm cho Mô hình của nó có thể nhìn thấy hoặc bị ẩn.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Target Entity | Entity | The entity to be edited |
-| Input Parameter | Activate | Boolean | Set to True to make the model visible |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Target Entity (Thực thể Mục tiêu) | Entity (Thực thể) | Thực thể sẽ được chỉnh sửa |
+| Input Parameter (Đầu vào) | Activate (Kích hoạt) | Boolean (Logic) | Đặt thành True để làm cho mô hình hiển thị |
 
 ## **5. Destroy Entity**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Destroying a specified entity will result in a destruction effect and can also trigger logic that only occurs after destruction, such as end-of-life behaviors in local projectiles or the dropping of energy orbs from destroyed creations.
+Phá hủy một thực thể được chỉ định sẽ dẫn đến hiệu ứng phá hủy và cũng có thể kích hoạt các logic chỉ xảy ra sau khi phá hủy, chẳng hạn như các hành vi khi kết thúc tuổi thọ của các vật thể bay cục bộ hoặc việc rớt ra các quả cầu năng lượng từ các tác phẩm tạo ra bị phá hủy.
 
-The [When Entity Is Destroyed] and [When Entity Is Removed/Destroyed] events can be monitored on Stage Entities
+Các sự kiện [Khi Thực thể Bị Phá hủy] (When Entity Is Destroyed) và [Khi Thực thể Bị Gỡ bỏ/Phá hủy] (When Entity Is Removed/Destroyed) có thể được giám sát trên Thực thể Màn chơi (Stage Entities).
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Target Entity | Entity | The entity to be destroyed |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Target Entity (Thực thể Mục tiêu) | Entity (Thực thể) | Thực thể sẽ bị phá hủy |
 
-## **6. Remove Entity**
+## **6. Remove Entity (Gỡ bỏ Thực thể)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Removing a specified entity is different from destroying it; there will be no destruction effect, and it will not trigger any logic that would occur after destruction, such as end-of-life behaviors in local projectiles or the dropping of energy orbs from removed creations.
+Gỡ bỏ một thực thể được chỉ định thì khác với việc phá hủy nó; sẽ không có hiệu ứng phá hủy, và nó sẽ không kích hoạt bất kỳ logic nào xảy ra sau khi phá hủy, chẳng hạn như các hành vi khi kết thúc tuổi thọ trong các vật thể bay cục bộ hoặc việc rớt ra các quả cầu năng lượng từ các tác phẩm tạo ra bị gỡ bỏ.
 
-Removing an Entity does not trigger the [On Entity Destroyed] event, but it can trigger the [On Entity Removed/Destroyed] event
+Việc gỡ bỏ một Thực thể không kích hoạt sự kiện [Khi Thực thể Bị Phá hủy] (On Entity Destroyed), nhưng nó có thể kích hoạt sự kiện [Khi Thực thể Bị Gỡ bỏ/Phá hủy] (On Entity Removed/Destroyed).
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Target Entity | Entity | The entity to be removed |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Target Entity (Thực thể Mục tiêu) | Entity (Thực thể) | Thực thể sẽ bị gỡ bỏ |
 
-# VI. Stage Related
+# VI. Stage Related (Liên quan đến Màn chơi)
 
-## **1. Settle Stage**
+## **1. Settle Stage (Tổng kết Màn chơi)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Triggers the Stage Settlement process, which executes out-of-stage logic as defined in Stage Settlement
+Kích hoạt quá trình Tổng kết Màn chơi, quá trình này thực thi logic bên ngoài màn chơi như được định nghĩa trong mục Tổng kết Màn chơi.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
 |  |  |  |  |
 
-## **2. Set Current Environment Time**
+## **2. Set Current Environment Time (Cài đặt Thời gian Môi trường Hiện tại)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Instantly switch Environment Time to the specified hour. The parameter must be a Floating Point Number between 0 and 24
+Ngay lập tức chuyển Thời gian Môi trường sang giờ được chỉ định. Tham số phải là một Số thực từ 0 đến 24.
 
-If the target hour is earlier than the current hour, it is treated as the next day (+1 day)
+Nếu giờ mục tiêu sớm hơn giờ hiện tại, nó được tính là ngày hôm sau (+1 ngày).
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Environment Time | Floating Point Numbers | Must be a floating point value between 0–24; this Node will not take effect if the value is outside this range |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Environment Time (Thời gian Môi trường) | Floating Point Numbers (Số thực) | Phải là một giá trị số thực từ 0–24; Node này sẽ không có hiệu lực nếu giá trị nằm ngoài phạm vi này |
 
-## **3. Set Environment Time Passage Speed**
+## **3. Set Environment Time Passage Speed (Cài đặt Tốc độ Trôi qua của Thời gian Môi trường)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Minutes elapsed per second, limited to 0 - 60 (Teyvat speed is 1)
+Số phút trôi qua mỗi giây, giới hạn từ 0 - 60 (Tốc độ ở Teyvat là 1).
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Environment Time Passage Speed | Floating Point Numbers | Clamped to the range 0–60. Values outside this range are automatically set to 0 or 60 |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Environment Time Passage Speed (Tốc độ Trôi qua của Thời gian Môi trường) | Floating Point Numbers (Số thực) | Bị giới hạn trong phạm vi 0–60. Các giá trị ngoài phạm vi này được tự động đặt thành 0 hoặc 60 |
 
-# VII. Faction Related
+# VII. Faction Related (Liên quan đến Phe phái)
 
 1.
 
-## Set Entity Faction
+## Set Entity Faction (Cài đặt Phe phái cho Thực thể)
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Set the faction of the specified target entity.
+Thiết lập phe phái của thực thể mục tiêu được chỉ định.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Target Entity | Entity | Entity whose faction is to be edited |
-| Input Parameter | Faction | Faction | Edited Faction |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Target Entity (Thực thể Mục tiêu) | Entity (Thực thể) | Thực thể sẽ được chỉnh sửa phe phái |
+| Input Parameter (Đầu vào) | Faction (Phe phái) | Faction (Phe phái) | Phe phái đã chỉnh sửa |
 
-# VIII. Player and Character Related
+# VIII. Player and Character Related (Liên quan đến Người chơi và Nhân vật)
 
-## **1. Teleport Player**
+## **1. Teleport Player (Dịch chuyển Người chơi)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Teleport the specified Player Entity. A loading interface may appear depending on teleport distance
+Dịch chuyển Thực thể Người chơi được chỉ định. Một giao diện tải có thể xuất hiện tùy thuộc vào khoảng cách dịch chuyển.
 
-If teleporting onto an object, ensure the target Y-coordinate is slightly higher than the landing position
+Nếu dịch chuyển lên trên một vật thể, hãy đảm bảo tọa độ Y mục tiêu cao hơn một chút so với vị trí tiếp đất.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Player Entity | Entity | Active Player |
-| Input Parameter | Target Location | 3D Vector | Absolute Location |
-| Input Parameter | Target Rotation | 3D Vector | Absolute Rotation |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Player Entity (Thực thể Người chơi) | Entity (Thực thể) | Người chơi Đang hoạt động (Active Player) |
+| Input Parameter (Đầu vào) | Target Location (Vị trí Mục tiêu) | 3D Vector | Vị trí Tuyệt đối (Absolute Location) |
+| Input Parameter (Đầu vào) | Target Rotation (Góc quay Mục tiêu) | 3D Vector | Góc quay Tuyệt đối (Absolute Rotation) |
 
-## **2. Revive Character**
+## **2. Revive Character (Hồi sinh Nhân vật)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Available only in Beyond Mode, revive the specified Character Entity
+Chỉ khả dụng trong Chế độ Beyond (Beyond Mode), hồi sinh Thực thể Nhân vật được chỉ định.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Character Entity | Entity | The Character Entity to be revived |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Character Entity (Thực thể Nhân vật) | Entity (Thực thể) | Thực thể Nhân vật sẽ được hồi sinh |
 
-## **3. Revive All Player's Characters**
+## **3. Revive All Player's Characters (Hồi sinh Tất cả Nhân vật của Người chơi)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Revive all character entities of a specified player, but this node is only effective when the player is in a state where all their characters are down.
+Hồi sinh tất cả thực thể nhân vật của người chơi được chỉ định, nhưng node này chỉ có hiệu lực khi người chơi ở trạng thái mà tất cả nhân vật của họ đã bị hạ gục.
 
-In Beyond Mode, since each player has only one character, this node has the same effect as the "Revive Character" node.
+Trong Chế độ Beyond, vì mỗi người chơi chỉ có một nhân vật, node này có tác dụng tương tự như node "Revive Character" (Hồi sinh Nhân vật).
 
-In Classic Mode, players can have multiple characters. If only some of the characters are down, this node will not take effect, meaning it will not revive the downed characters.
+Trong Chế độ Classic (Cổ điển), người chơi có thể có nhiều nhân vật. Nếu chỉ một số nhân vật bị hạ gục, node này sẽ không có hiệu lực, nghĩa là nó sẽ không hồi sinh các nhân vật đã bị hạ gục.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Player Entity | Entity | The Player Entity that owns the Character |
-| Input Parameter | Deduct Revives | Boolean | If set to False, the Revive Count will not be deducted |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Player Entity (Thực thể Người chơi) | Entity (Thực thể) | Thực thể Người chơi sở hữu Nhân vật |
+| Input Parameter (Đầu vào) | Deduct Revives (Trừ lượt Hồi sinh) | Boolean (Logic) | Nếu đặt thành False, Số lượt Hồi sinh sẽ không bị trừ |
 
-## **4. Defeat All Player's Characters**
+## **4. Defeat All Player's Characters (Hạ gục Tất cả Nhân vật của Người chơi)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Knock down all characters of the specified player, causing the player to enter *When All Player's Characters Are Down* *state*.
+Đánh gục tất cả nhân vật của người chơi được chỉ định, khiến người chơi bước vào trạng thái *Khi Tất cả Nhân vật của Người chơi Bị Hạ gục* (When All Player's Characters Are Down).
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Player Entity | Entity | The Player Entity that owns the Character |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Player Entity (Thực thể Người chơi) | Entity (Thực thể) | Thực thể Người chơi sở hữu Nhân vật |
 
-## **5. Activate Revive Point**
+## **5. Activate Revive Point (Kích hoạt Điểm Hồi sinh)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Activate the specified Revive Point ID for the player. When the player later triggers Revive logic, they can revive at this Revive Point
+Kích hoạt ID Điểm Hồi sinh được chỉ định cho người chơi. Lần sau, khi người chơi kích hoạt logic Hồi sinh, họ có thể hồi sinh tại Điểm Hồi sinh này.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Player Entity | Entity | Active Player |
-| Input Parameter | Revive Point ID | Integer | Identifier for this Revive Point |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Player Entity (Thực thể Người chơi) | Entity (Thực thể) | Người chơi Đang hoạt động (Active Player) |
+| Input Parameter (Đầu vào) | Revive Point ID (ID Điểm Hồi sinh) | Integer (Số nguyên) | Mã định danh cho Điểm Hồi sinh này |
 
-## **6. Set Player Revive Time**
+## **6. Set Player Revive Time (Cài đặt Thời gian Hồi sinh của Người chơi)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Set the duration for the Player's next revive. If the Player is currently reviving, this does not affect the ongoing revive process
+Cài đặt thời lượng cho lần hồi sinh tiếp theo của Người chơi. Nếu Người chơi hiện đang hồi sinh, điều này không ảnh hưởng đến quá trình hồi sinh đang diễn ra.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Player Entity | Entity | Active Player |
-| Input Parameter | Duration | Integer | Unit in seconds |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Player Entity (Thực thể Người chơi) | Entity (Thực thể) | Người chơi Đang hoạt động |
+| Input Parameter (Đầu vào) | Duration (Thời lượng) | Integer (Số nguyên) | Đơn vị là giây |
 
-## **7. Set Player Remaining Revives**
+## **7. Set Player Remaining Revives (Cài đặt Số lượt Hồi sinh Còn lại của Người chơi)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Set the remaining number of revives for the specified Player. When set to 0, the Player cannot revive
+Cài đặt số lượt hồi sinh còn lại cho Người chơi được chỉ định. Khi đặt thành 0, Người chơi không thể hồi sinh.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Player Entity | Entity | Active Player |
-| Input Parameter | Remaining Times | Integer | When set to 0, the player will not be revived |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Player Entity (Thực thể Người chơi) | Entity (Thực thể) | Người chơi Đang hoạt động |
+| Input Parameter (Đầu vào) | Remaining Times (Số lần Còn lại) | Integer (Số nguyên) | Khi đặt thành 0, người chơi sẽ không được hồi sinh |
 
-## **8. Set Environment Configuration**
+## **8. Set Environment Configuration (Cài đặt Cấu hình Môi trường)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Apply the specified Environment Configuration to the designated player. Takes effect immediately upon execution
+Áp dụng Cấu hình Môi trường được chỉ định cho người chơi được chọn. Có hiệu lực ngay khi thực thi.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Environment Config Index | Integer | Identifier for this Environment Configuration |
-| Input Parameter | Target Player List | Entity List | Applies only to Players in the specified list |
-| Input Parameter | Enable Weather Config | Boolean | Set to True to enable |
-| Input Parameter | Weather Config Index | Integer | The Weather Configuration matching this ID will take effect. If the ID does not exist, nothing happens |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Environment Config Index (Chỉ số Cấu hình Môi trường) | Integer (Số nguyên) | Mã định danh cho Cấu hình Môi trường này |
+| Input Parameter (Đầu vào) | Target Player List (Danh sách Người chơi Mục tiêu) | Entity List (Danh sách Thực thể) | Chỉ áp dụng cho Người chơi trong danh sách được chỉ định |
+| Input Parameter (Đầu vào) | Enable Weather Config (Bật Cấu hình Thời tiết) | Boolean (Logic) | Đặt thành True để bật |
+| Input Parameter (Đầu vào) | Weather Config Index (Chỉ số Cấu hình Thời tiết) | Integer (Số nguyên) | Cấu hình Thời tiết khớp với ID này sẽ có hiệu lực. Nếu ID không tồn tại, sẽ không có gì xảy ra |
 
-## **9. Allow/Forbid Player to Revive**
+## **9. Allow/Forbid Player to Revive (Cho phép/Cấm Người chơi Hồi sinh)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Set whether the specified player is allowed to revive
+Cài đặt xem người chơi được chỉ định có được phép hồi sinh hay không.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Player Entity | Entity | Active Player |
-| Input Parameter | Allow | Boolean | If set to True, reviving is allowed |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Player Entity (Thực thể Người chơi) | Entity (Thực thể) | Người chơi Đang hoạt động |
+| Input Parameter (Đầu vào) | Allow (Cho phép) | Boolean (Logic) | Nếu đặt thành True, người chơi được phép hồi sinh |
 
-## **10. Deactivate Revive Point**
+## **10. Deactivate Revive Point (Hủy kích hoạt Điểm Hồi sinh)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Unregister the specified Revive Point ID for the player. The layer will not revive at this Revive Point next time
+Hủy đăng ký ID Điểm Hồi sinh được chỉ định cho người chơi. Lần tới, người chơi sẽ không hồi sinh tại Điểm Hồi sinh này.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Player Entity | Entity | Active Player |
-| Input Parameter | Revive Point ID | Integer | Identifier for this Revive Point |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Player Entity (Thực thể Người chơi) | Entity (Thực thể) | Người chơi Đang hoạt động |
+| Input Parameter (Đầu vào) | Revive Point ID (ID Điểm Hồi sinh) | Integer (Số nguyên) | Mã định danh cho Điểm Hồi sinh này |
 
-## **11.** Set Character's Elemental Energy
+## **11.** Set Character's Elemental Energy (Cài đặt Năng lượng Nguyên tố của Nhân vật)
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Available only in Classic Mode, sets the elemental energy for a specific character.
+Chỉ khả dụng trong Chế độ Classic (Cổ điển), cài đặt năng lượng nguyên tố cho một nhân vật cụ thể.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Character Entity | Entity |  |
-| Input Parameter | Elemental Energy | Floating Point Numbers |  |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Character Entity (Thực thể Nhân vật) | Entity (Thực thể) |  |
+| Input Parameter (Đầu vào) | Elemental Energy (Năng lượng Nguyên tố) | Floating Point Numbers (Số thực) |  |
 
-## **12.** Increases Character's Elemental Energy
+## **12.** Increases Character's Elemental Energy (Tăng Năng lượng Nguyên tố của Nhân vật)
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Available only in Classic Mode, increases the elemental energy for a specific character.
+Chỉ khả dụng trong Chế độ Classic (Cổ điển), tăng năng lượng nguyên tố cho một nhân vật cụ thể.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Character Entity | Entity |  |
-| Input Parameter | Elemental Energy Increase Value | Floating Point Numbers |  |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Character Entity (Thực thể Nhân vật) | Entity (Thực thể) |  |
+| Input Parameter (Đầu vào) | Elemental Energy Increase Value (Giá trị Tăng Năng lượng Nguyên tố) | Floating Point Numbers (Số thực) |  |
 
-## **13. Revive the active character**
+## **13. Revive the active character (Hồi sinh nhân vật đang hoạt động)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Available only in Classic Mode, revive the defeated active character entity of the specified player
+Chỉ khả dụng trong Chế độ Classic (Cổ điển), hồi sinh thực thể nhân vật đang hoạt động đã bị hạ gục của người chơi được chỉ định.
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Player Entity | Entity |  |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Player Entity (Thực thể Người chơi) | Entity (Thực thể) |  |
 
-## **14. Teleport Player (Classic Mode)**
+## **14. Teleport Player (Classic Mode) (Dịch chuyển Người chơi (Chế độ Cổ điển))**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Teleports the specified Player Entity. A loading screen may appear depending on the travel distance
+Dịch chuyển Thực thể Người chơi được chỉ định. Một màn hình tải có thể xuất hiện tùy thuộc vào khoảng cách di chuyển.
 
-If teleporting onto an object, the target position's Y-coordinate must be slightly higher than the point of landing
+Nếu dịch chuyển lên trên một vật thể, tọa độ Y của vị trí mục tiêu phải cao hơn một chút so với điểm tiếp đất.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Player Entity | Entity | Active Player |
-| Input Parameter | Target Location | 3D Vector | Absolute position |
-| Input Parameter | Target Rotation | 3D Vector | Absolute rotation |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Player Entity (Thực thể Người chơi) | Entity (Thực thể) | Người chơi Đang hoạt động |
+| Input Parameter (Đầu vào) | Target Location (Vị trí Mục tiêu) | 3D Vector | Vị trí tuyệt đối |
+| Input Parameter (Đầu vào) | Target Rotation (Góc quay Mục tiêu) | 3D Vector | Góc quay tuyệt đối |
 
-# IX. Collision
+# IX. Collision (Va chạm)
 
-## **1. Activate/Disable Extra Collision**
+## **1. Activate/Disable Extra Collision (Kích hoạt/Vô hiệu hóa Va chạm Phụ)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Edit data in the Entity's Extra Collision Component to enable/disable Extra Collision
+Chỉnh sửa dữ liệu trong Thành phần Va chạm Phụ (Extra Collision Component) của Thực thể để bật/tắt Va chạm Phụ.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Target Entity | Entity | Active Entity |
-| Input Parameter | Extra Collision ID | Integer | Identifier for this Extra Collision |
-| Input Parameter | Activate | Boolean | Set to True to activate |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Target Entity (Thực thể Mục tiêu) | Entity (Thực thể) | Thực thể Đang hoạt động (Active Entity) |
+| Input Parameter (Đầu vào) | Extra Collision ID (ID Va chạm Phụ) | Integer (Số nguyên) | Mã định danh cho Va chạm Phụ này |
+| Input Parameter (Đầu vào) | Activate (Kích hoạt) | Boolean (Logic) | Đặt thành True để kích hoạt |
 
-## **2. Activate/Disable Extra Collision Climbability**
+## **2. Activate/Disable Extra Collision Climbability (Kích hoạt/Vô hiệu hóa Khả năng Leo trèo của Va chạm Phụ)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Edit the Climbability of the Entity's Extra Collision Component
+Chỉnh sửa Khả năng Leo trèo (Climbability) của Thành phần Va chạm Phụ của Thực thể.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Target Entity | Entity | Active Entity |
-| Input Parameter | Extra Collision ID | Integer | Identifier for this Extra Collision |
-| Input Parameter | Activate | Boolean | Set to True to activate |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Target Entity (Thực thể Mục tiêu) | Entity (Thực thể) | Thực thể Đang hoạt động |
+| Input Parameter (Đầu vào) | Extra Collision ID (ID Va chạm Phụ) | Integer (Số nguyên) | Mã định danh cho Va chạm Phụ này |
+| Input Parameter (Đầu vào) | Activate (Kích hoạt) | Boolean (Logic) | Đặt thành True để kích hoạt |
 
-## **3. Activate/Disable Native Collision**
+## **3. Activate/Disable Native Collision (Kích hoạt/Vô hiệu hóa Va chạm Gốc)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Edit the Entity's Native Collision
+Chỉnh sửa Va chạm Gốc (Native Collision) của Thực thể.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Target Entity | Entity | Active Entity |
-| Input Parameter | Activate | Boolean | Set to True to activate |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Target Entity (Thực thể Mục tiêu) | Entity (Thực thể) | Thực thể Đang hoạt động |
+| Input Parameter (Đầu vào) | Activate (Kích hoạt) | Boolean (Logic) | Đặt thành True để kích hoạt |
 
-## **4. Activate/Disable Native Collision Climbability**
+## **4. Activate/Disable Native Collision Climbability (Kích hoạt/Vô hiệu hóa Khả năng Leo trèo của Va chạm Gốc)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Edit the Climbability of the Entity's Native Collision
+Chỉnh sửa Khả năng Leo trèo của Va chạm Gốc của Thực thể.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Target Entity | Entity | Active Entity |
-| Input Parameter | Activate | Boolean | Set to True to activate |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Target Entity (Thực thể Mục tiêu) | Entity (Thực thể) | Thực thể Đang hoạt động |
+| Input Parameter (Đầu vào) | Activate (Kích hoạt) | Boolean (Logic) | Đặt thành True để kích hoạt |
 
-# X. Collision Triggers
+# X. Collision Triggers (Kích hoạt Va chạm)
 
-## **1. Activate/Disable Collision Trigger**
+## **1. Activate/Disable Collision Trigger (Kích hoạt/Vô hiệu hóa Kích hoạt Va chạm)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Edit the Collision Trigger Component data to Activate/Disable the Trigger at the specified ID
+Chỉnh sửa dữ liệu của Thành phần Kích hoạt Va chạm (Collision Trigger Component) để Kích hoạt/Vô hiệu hóa Kích hoạt tại ID được chỉ định.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Target Entity | Entity | Active Entity |
-| Input Parameter | Trigger ID | Integer | Identifier for this Collision Trigger |
-| Input Parameter | Activate | Boolean | Set to True to activate |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Target Entity (Thực thể Mục tiêu) | Entity (Thực thể) | Thực thể Đang hoạt động |
+| Input Parameter (Đầu vào) | Trigger ID (ID Kích hoạt) | Integer (Số nguyên) | Mã định danh cho Kích hoạt Va chạm này |
+| Input Parameter (Đầu vào) | Activate (Kích hoạt) | Boolean (Logic) | Đặt thành True để kích hoạt |
 
-# XI. Combat
+# XI. Combat (Chiến đấu)
 
-## **1. Initiate Attack**
-
-![]()
+## **1. Initiate Attack (Bắt đầu Tấn công)**
 
 ![]()
 
-**Node Functions**
+![]()
 
-Make the specified Entity initiate an attack. The Entity that uses this node must have the corresponding Ability Unit configured.
+**Node Functions (Chức năng Node)**
 
-There are two usage modes:
+Làm cho Thực thể được chỉ định bắt đầu một cuộc tấn công. Thực thể sử dụng node này phải được cấu hình Đơn vị Kỹ năng (Ability Unit) tương ứng.
 
-When the Ability Unit is [Hitbox Attack], it executes a hitbox attack centered on the Target Entity's Location
+Có hai chế độ sử dụng:
 
-When the Ability Unit is [Direct Attack], it directly attacks the Target Entity
+Khi Đơn vị Kỹ năng là [Tấn công Hitbox] (Hitbox Attack), nó thực hiện một đòn tấn công hitbox tập trung vào Vị trí của Thực thể Mục tiêu.
 
-**Node Parameters**
+Khi Đơn vị Kỹ năng là [Tấn công Trực tiếp] (Direct Attack), nó trực tiếp tấn công Thực thể Mục tiêu.
+
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Target Entity | Entity | Depending on the Ability Unit, this can be treated either as the reference target for the Hitbox Location or as the attack target |
-| Input Parameter | Damage Coefficient | Floating Point Numbers | The coefficient applied to the damage dealt by this attack |
-| Input Parameter | Damage Increment | Floating Point Numbers | The incremental damage applied by this attack |
-| Input Parameter | Location Offset | 3D Vector | When using Hitbox Attack, determines the Hitbox offset When using Direct Attack, determines the hit-detection location for the attack and thus where on-hit special effects are created |
-| Input Parameter | Rotation Offset | 3D Vector | When using Hitbox Attack, determines the Hitbox rotation When using Direct Attack, determines the hit-detection location for the attack and thus the rotation used for on-hit effects |
-| Input Parameter | Ability Unit | String | Referenced Ability Unit. Must be configured on the entity associated with this Node Graph |
-| Input Parameter | Overwrite Ability Unit Config | Boolean | When set to True, the four parameters — Damage Coefficient, Damage Increment, Location Offset, and Rotation Offset — overwrite parameters of the same name in the Ability Unit. When set to False, the Ability Unit's original configuration is used |
-| Input Parameter | Initiator Entity | Entity | Determines the Initiator Entity for this attack. Defaults to the Entity associated with this Node Graph. Affects which attacker is identified in events such as On Hit and When Attacked |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Target Entity (Thực thể Mục tiêu) | Entity (Thực thể) | Tùy thuộc vào Đơn vị Kỹ năng, phần này có thể được xem là mục tiêu tham chiếu cho Vị trí Hitbox hoặc làm mục tiêu tấn công |
+| Input Parameter (Đầu vào) | Damage Coefficient (Hệ số Sát thương) | Floating Point Numbers (Số thực) | Hệ số áp dụng cho lượng sát thương gây ra bởi đòn tấn công này |
+| Input Parameter (Đầu vào) | Damage Increment (Gia tăng Sát thương) | Floating Point Numbers (Số thực) | Lượng sát thương cộng thêm áp dụng cho đòn tấn công này |
+| Input Parameter (Đầu vào) | Location Offset (Độ lệch Vị trí) | 3D Vector | Khi sử dụng Tấn công Hitbox, sẽ xác định độ lệch Hitbox. Khi sử dụng Tấn công Trực tiếp, sẽ xác định vị trí phát hiện đòn đánh cho cuộc tấn công và do đó quyết định nơi các hiệu ứng đặc biệt khi trúng đòn được tạo ra |
+| Input Parameter (Đầu vào) | Rotation Offset (Độ lệch Góc quay) | 3D Vector | Khi sử dụng Tấn công Hitbox, sẽ xác định góc quay Hitbox. Khi sử dụng Tấn công Trực tiếp, sẽ xác định vị trí phát hiện đòn đánh cho cuộc tấn công và do đó quyết định góc quay được sử dụng cho các hiệu ứng khi trúng đòn |
+| Input Parameter (Đầu vào) | Ability Unit (Đơn vị Kỹ năng) | String (Chuỗi) | Đơn vị Kỹ năng được tham chiếu. Phải được cấu hình trên thực thể được liên kết với Node Graph này |
+| Input Parameter (Đầu vào) | Overwrite Ability Unit Config (Ghi đè Cấu hình Đơn vị Kỹ năng) | Boolean (Logic) | Khi đặt thành True, bốn tham số — Hệ số Sát thương, Gia tăng Sát thương, Độ lệch Vị trí và Độ lệch Góc quay — sẽ ghi đè các tham số có cùng tên trong Đơn vị Kỹ năng. Khi đặt thành False, cấu hình ban đầu của Đơn vị Kỹ năng sẽ được sử dụng |
+| Input Parameter (Đầu vào) | Initiator Entity (Thực thể Khởi xướng) | Entity (Thực thể) | Xác định Thực thể Khởi xướng cho cuộc tấn công này. Mặc định là Thực thể được liên kết với Node Graph này. Ảnh hưởng đến việc kẻ tấn công nào được xác định trong các sự kiện như Trúng đòn (On Hit) và Khi Bị Tấn công (When Attacked) |
 
-## **2. Recover HP**
+## **2. Recover HP (Phục hồi HP)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Restore HP to the specified Target Entity via an Ability Unit
+Phục hồi HP cho Thực thể Mục tiêu được chỉ định thông qua một Đơn vị Kỹ năng.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Target Entity | Entity | Target of HP restoration |
-| Input Parameter | Recovery Amount | Floating Point Numbers | The amount of HP restored in this healing instance |
-| Input Parameter | Ability Unit | String | Referenced Ability Unit. Must be configured on the entity associated with this Node Graph |
-| Input Parameter | Overwrite Ability Unit Config | Boolean | When set to True, the Recovery Amount overwrites the parameter of the same name in the Ability Unit. When set to False, the Ability Unit's original configuration is used |
-| Input Parameter | Recover Initiator Entity | Entity | Determines the Initiator Entity of this healing action. Defaults to the Entity associated with this Node Graph. Affects healer identification in events such as When HP Is Recovered and When Initiating HP Recovery |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Target Entity (Thực thể Mục tiêu) | Entity (Thực thể) | Mục tiêu phục hồi HP |
+| Input Parameter (Đầu vào) | Recovery Amount (Lượng Phục hồi) | Floating Point Numbers (Số thực) | Lượng HP được phục hồi trong lần hồi máu này |
+| Input Parameter (Đầu vào) | Ability Unit (Đơn vị Kỹ năng) | String (Chuỗi) | Đơn vị Kỹ năng được tham chiếu. Phải được cấu hình trên thực thể liên kết với Node Graph này |
+| Input Parameter (Đầu vào) | Overwrite Ability Unit Config (Ghi đè Cấu hình Đơn vị Kỹ năng) | Boolean (Logic) | Khi đặt thành True, Lượng Phục hồi ghi đè tham số có cùng tên trong Đơn vị Kỹ năng. Khi đặt thành False, cấu hình ban đầu của Đơn vị Kỹ năng sẽ được sử dụng |
+| Input Parameter (Đầu vào) | Recover Initiator Entity (Thực thể Khởi xướng Phục hồi) | Entity (Thực thể) | Xác định Thực thể Khởi xướng của hành động hồi máu này. Mặc định là Thực thể liên kết với Node Graph này. Ảnh hưởng đến việc xác định người hồi máu trong các sự kiện như Khi HP Được Phục hồi (When HP Is Recovered) và Khi Bắt đầu Phục hồi HP (When Initiating HP Recovery) |
 
-## **3. HP Loss**
+## **3. HP Loss (Mất HP)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Directly cause the specified target to lose HP. Losing HP is not an attack, so it does not trigger attack-related events
+Trực tiếp làm cho mục tiêu được chỉ định bị mất HP. Mất HP không phải là một cuộc tấn công, vì vậy nó không kích hoạt các sự kiện liên quan đến tấn công.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Target Entity | Entity | Target that loses HP |
-| Input Parameter | HP Loss | Floating Point Numbers | The amount of HP lost in this instance |
-| Input Parameter | Lethal | Boolean | If set to False, this HP loss will leave the Target with at least 1 HP remaining |
-| Input Parameter | Can be blocked by invincibility | Boolean | If set to True, and the Target is set to Invincible via Unit Status, HP loss has no effect |
-| Input Parameter | Can be Blocked by Locked HP? | Boolean | If set to True, and the Target's HP is locked via Unit Status, HP loss has no effect |
-| Input Parameter | Damage Pop-Up Type | Enumeration | No Pop-Up  Normal Pop-Up  CRIT Hit Pop-Up |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Target Entity (Thực thể Mục tiêu) | Entity (Thực thể) | Mục tiêu bị mất HP |
+| Input Parameter (Đầu vào) | HP Loss (Lượng HP Mất) | Floating Point Numbers (Số thực) | Lượng HP bị mất trong trường hợp này |
+| Input Parameter (Đầu vào) | Lethal (Chí mạng) | Boolean (Logic) | Nếu đặt thành False, lần mất HP này sẽ để lại cho Mục tiêu ít nhất 1 HP |
+| Input Parameter (Đầu vào) | Can be blocked by invincibility (Có thể bị chặn bởi trạng thái bất khả chiến bại) | Boolean (Logic) | Nếu đặt thành True, và Mục tiêu được đặt là Bất khả chiến bại (Invincible) thông qua Trạng thái Đơn vị (Unit Status), thì việc mất HP sẽ không có tác dụng |
+| Input Parameter (Đầu vào) | Can be Blocked by Locked HP? (Có thể bị Chặn bởi HP Bị Khóa không?) | Boolean (Logic) | Nếu đặt thành True, và HP của Mục tiêu bị khóa thông qua Trạng thái Đơn vị, thì việc mất HP sẽ không có tác dụng |
+| Input Parameter (Đầu vào) | Damage Pop-Up Type (Loại Hiển thị Sát thương) | Enumeration (Liệt kê) | Không Hiển thị (No Pop-Up) / Hiển thị Bình thường (Normal Pop-Up) / Hiển thị Đòn Chí mạng (CRIT Hit Pop-Up) |
 
-## **4. Recover HP Directly**
+## **4. Recover HP Directly (Phục hồi HP Trực tiếp)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Directly restore HP to the specified Target Entity. Unlike [Recover HP], this node does not require an Ability Unit
+Trực tiếp phục hồi HP cho Thực thể Mục tiêu được chỉ định. Khác với [Recover HP], node này không yêu cầu một Đơn vị Kỹ năng.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Recover Initiator Entity | Entity | The Entity that initiates healing |
-| Input Parameter | Recover Target Entity | Entity | The Target Entity to be healed |
-| Input Parameter | Recovery Amount | Floating Point Numbers | The amount of HP restored in this healing instance |
-| Input Parameter | Ignore Recovery Amount Adjustment | Boolean | If set to True, this healing amount is not affected by the Target's Unit Status effects that adjust healing |
-| Input Parameter | Aggro Generation Multiplier | Floating Point Numbers | The Aggro generated by this healing, expressed as a multiplier. Only applicable when using Custom Aggro Mode |
-| Input Parameter | Aggro Generation Increment | Floating Point Numbers | The Aggro generated by this healing, expressed as an incremental value. Only applicable when using Custom Aggro Mode |
-| Input Parameter | Healing Tag List | String List | The list of tags associated with this healing action. These can be accessed in the When HP Is Recovered and When Initiating HP Recovery events to identify a specific healing action |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Recover Initiator Entity (Thực thể Khởi xướng Phục hồi) | Entity (Thực thể) | Thực thể khởi xướng việc hồi máu |
+| Input Parameter (Đầu vào) | Recover Target Entity (Thực thể Mục tiêu Phục hồi) | Entity (Thực thể) | Thực thể Mục tiêu sẽ được hồi máu |
+| Input Parameter (Đầu vào) | Recovery Amount (Lượng Phục hồi) | Floating Point Numbers (Số thực) | Lượng HP được phục hồi trong lần hồi máu này |
+| Input Parameter (Đầu vào) | Ignore Recovery Amount Adjustment (Bỏ qua Điều chỉnh Lượng Phục hồi) | Boolean (Logic) | Nếu đặt thành True, lượng hồi máu này sẽ không bị ảnh hưởng bởi các hiệu ứng Trạng thái Đơn vị của Mục tiêu có điều chỉnh lượng hồi máu |
+| Input Parameter (Đầu vào) | Aggro Generation Multiplier (Hệ số Tạo Aggro) | Floating Point Numbers (Số thực) | Điểm Thu hút (Aggro) được tạo ra bởi lần hồi máu này, thể hiện dưới dạng hệ số nhân. Chỉ áp dụng khi sử dụng Chế độ Aggro Tùy chỉnh (Custom Aggro Mode) |
+| Input Parameter (Đầu vào) | Aggro Generation Increment (Gia tăng Tạo Aggro) | Floating Point Numbers (Số thực) | Điểm Thu hút được tạo ra bởi lần hồi máu này, thể hiện dưới dạng giá trị gia tăng. Chỉ áp dụng khi sử dụng Chế độ Aggro Tùy chỉnh |
+| Input Parameter (Đầu vào) | Healing Tag List (Danh sách Thẻ Hồi máu) | String List (Danh sách Chuỗi) | Danh sách các thẻ được liên kết với hành động hồi máu này. Có thể truy cập chúng trong các sự kiện Khi HP Được Phục hồi và Khi Bắt đầu Phục hồi HP để xác định một hành động hồi máu cụ thể |
 
-# XII. Motion Devices
+# XII. Motion Devices (Thiết bị Chuyển động)
 
-## **1. Recover Basic Motion Device**
+## **1. Recover Basic Motion Device (Khôi phục Thiết bị Chuyển động Cơ bản)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Resume a paused Basic Motion Device on the Target Entity. The Target Entity must have the Basic Motion Device Component
+Tiếp tục một Thiết bị Chuyển động Cơ bản (Basic Motion Device) đang bị tạm dừng trên Thực thể Mục tiêu. Thực thể Mục tiêu phải có Thành phần Thiết bị Chuyển động Cơ bản.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Target Entity | Entity | Active Entity |
-| Input Parameter | Motion Device Name | String | Identifier for this motion device |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Target Entity (Thực thể Mục tiêu) | Entity (Thực thể) | Thực thể Đang hoạt động |
+| Input Parameter (Đầu vào) | Motion Device Name (Tên Thiết bị Chuyển động) | String (Chuỗi) | Mã định danh cho thiết bị chuyển động này |
 
-## **2. Activate Fixed-Point Motion Device**
-
-![]()
+## **2. Activate Fixed-Point Motion Device (Kích hoạt Thiết bị Chuyển động Điểm Cố định)**
 
 ![]()
 
-**Node Functions**
+![]()
 
-Dynamically add a Fixed-Point Basic Motion Device to the Target Entity during Stage runtime
+**Node Functions (Chức năng Node)**
 
-**Node Parameters**
+Động lực thêm Thiết bị Chuyển động Cơ bản Điểm Cố định (Fixed-Point Basic Motion Device) vào Thực thể Mục tiêu trong thời gian chạy của Màn chơi.
+
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Target Entity | Entity | Active Entity |
-| Input Parameter | Motion Device Name | String | Identifier for this motion device |
-| Input Parameter | Movement Mode | Enumeration |  |
-| Input Parameter | Movement SPD | Floating Point Numbers |  |
-| Input Parameter | Target Location | 3D Vector | Absolute Location |
-| Input Parameter | Target Rotation | 3D Vector | Absolute Rotation |
-| Input Parameter | Lock Rotation | Boolean |  |
-| Input Parameter | Parameter Type | Enumeration | Options: Fixed Speed or Fixed Time |
-| Input Parameter | Movement Time | Floating Point Numbers |  |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Target Entity (Thực thể Mục tiêu) | Entity (Thực thể) | Thực thể Đang hoạt động |
+| Input Parameter (Đầu vào) | Motion Device Name (Tên Thiết bị Chuyển động) | String (Chuỗi) | Mã định danh cho thiết bị chuyển động này |
+| Input Parameter (Đầu vào) | Movement Mode (Chế độ Di chuyển) | Enumeration (Liệt kê) |  |
+| Input Parameter (Đầu vào) | Movement SPD (Tốc độ Di chuyển) | Floating Point Numbers (Số thực) |  |
+| Input Parameter (Đầu vào) | Target Location (Vị trí Mục tiêu) | 3D Vector | Vị trí tuyệt đối |
+| Input Parameter (Đầu vào) | Target Rotation (Góc quay Mục tiêu) | 3D Vector | Góc quay tuyệt đối |
+| Input Parameter (Đầu vào) | Lock Rotation (Khóa Góc quay) | Boolean (Logic) |  |
+| Input Parameter (Đầu vào) | Parameter Type (Loại tham số) | Enumeration (Liệt kê) | Tùy chọn: Tốc độ Cố định (Fixed Speed) hoặc Thời gian Cố định (Fixed Time) |
+| Input Parameter (Đầu vào) | Movement Time (Thời gian Di chuyển) | Floating Point Numbers (Số thực) |  |
 
-## **3. Activate Basic Motion Device**
+## **3. Activate Basic Motion Device (Kích hoạt Thiết bị Chuyển động Cơ bản)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Activate a Basic Motion Device configured within the Target Entity's Basic Motion Device Component
+Kích hoạt Thiết bị Chuyển động Cơ bản (Basic Motion Device) được cấu hình trong Thành phần Thiết bị Chuyển động Cơ bản của Thực thể Mục tiêu.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Target Entity | Entity | Active Entity |
-| Input Parameter | Motion Device Name | String | Identifier for this motion device |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Target Entity (Thực thể Mục tiêu) | Entity (Thực thể) | Thực thể Đang hoạt động |
+| Input Parameter (Đầu vào) | Motion Device Name (Tên Thiết bị Chuyển động) | String (Chuỗi) | Mã định danh cho thiết bị chuyển động này |
 
-## **4. Add Target-Oriented Rotation-Based Motion Device**
+## **4. Add Target-Oriented Rotation-Based Motion Device (Thêm Thiết bị Chuyển động Dựa trên Góc quay Hướng tới Mục tiêu)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Dynamically add a Basic Motion Device with Target-Oriented Rotation to the Target Entity during Stage runtime
+Động lực thêm Thiết bị Chuyển động Cơ bản với khả năng Xoay Hướng tới Mục tiêu (Target-Oriented Rotation) vào Thực thể Mục tiêu trong thời gian chạy của Màn chơi.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Target Entity | Entity | Active Entity |
-| Input Parameter | Motion Device Name | String | Identifier for this motion device |
-| Input Parameter | Motion Device Duration | Floating Point Numbers | The duration for which this motion device remains active |
-| Input Parameter | Target Angle | 3D Vector | Absolute Angle |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Target Entity (Thực thể Mục tiêu) | Entity (Thực thể) | Thực thể Đang hoạt động |
+| Input Parameter (Đầu vào) | Motion Device Name (Tên Thiết bị Chuyển động) | String (Chuỗi) | Mã định danh cho thiết bị chuyển động này |
+| Input Parameter (Đầu vào) | Motion Device Duration (Thời lượng Thiết bị Chuyển động) | Floating Point Numbers (Số thực) | Thời lượng mà thiết bị chuyển động này duy trì trạng thái hoạt động |
+| Input Parameter (Đầu vào) | Target Angle (Góc Mục tiêu) | 3D Vector | Góc tuyệt đối |
 
-## **5. Add Uniform Basic Linear Motion Device**
+## **5. Add Uniform Basic Linear Motion Device (Thêm Thiết bị Chuyển động Tuyến tính Cơ bản Đều)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Dynamically add a Basic Motion Device with Uniform Linear Motion at runtime
+Động lực thêm Thiết bị Chuyển động Cơ bản với Chuyển động Tuyến tính Đều (Uniform Linear Motion) vào thời gian chạy.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Target Entity | Entity | Active Entity |
-| Input Parameter | Motion Device Name | String | Identifier for this motion device |
-| Input Parameter | Motion Device Duration | Floating Point Numbers | The duration for which this motion device remains active |
-| Input Parameter | Velocity Vector | 3D Vector | Determines the magnitude and direction of the velocity |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Target Entity (Thực thể Mục tiêu) | Entity (Thực thể) | Thực thể Đang hoạt động |
+| Input Parameter (Đầu vào) | Motion Device Name (Tên Thiết bị Chuyển động) | String (Chuỗi) | Mã định danh cho thiết bị chuyển động này |
+| Input Parameter (Đầu vào) | Motion Device Duration (Thời lượng Thiết bị Chuyển động) | Floating Point Numbers (Số thực) | Thời lượng mà thiết bị chuyển động này duy trì trạng thái hoạt động |
+| Input Parameter (Đầu vào) | Velocity Vector (Vecto Vận tốc) | 3D Vector | Xác định độ lớn và hướng của vận tốc |
 
-## **6. Add Uniform Basic Rotation-Based Motion Device**
+## **6. Add Uniform Basic Rotation-Based Motion Device (Thêm Thiết bị Chuyển động Cơ bản Dựa trên Góc quay Đều)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Dynamically add a Basic Motion Device with Uniform Rotation at runtime
+Động lực thêm Thiết bị Chuyển động Cơ bản với Chuyển động Xoay Đều (Uniform Rotation) vào thời gian chạy.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Target Entity | Entity | Active Entity |
-| Input Parameter | Motion Device Name | String | Identifier for this motion device |
-| Input Parameter | Motion Device Duration | Floating Point Numbers | The duration for which this motion device remains active |
-| Input Parameter | Angular Velocity (°/s) | Floating Point Numbers | Angular Velocity Magnitude |
-| Input Parameter | Rotation Axis Orientation | 3D Vector | Relative Orientation |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Target Entity (Thực thể Mục tiêu) | Entity (Thực thể) | Thực thể Đang hoạt động |
+| Input Parameter (Đầu vào) | Motion Device Name (Tên Thiết bị Chuyển động) | String (Chuỗi) | Mã định danh cho thiết bị chuyển động này |
+| Input Parameter (Đầu vào) | Motion Device Duration (Thời lượng Thiết bị Chuyển động) | Floating Point Numbers (Số thực) | Thời lượng mà thiết bị chuyển động này duy trì trạng thái hoạt động |
+| Input Parameter (Đầu vào) | Angular Velocity (°/s) (Vận tốc Góc) | Floating Point Numbers (Số thực) | Độ lớn của Vận tốc Góc |
+| Input Parameter (Đầu vào) | Rotation Axis Orientation (Hướng của Trục Quay) | 3D Vector | Hướng tương đối |
 
-## **7. Stop and Delete Basic Motion Device**
+## **7. Stop and Delete Basic Motion Device (Dừng và Xóa Thiết bị Chuyển động Cơ bản)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Stop and delete a running Motion Device
+Dừng và xóa một Thiết bị Chuyển động đang chạy.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Target Entity | Entity | Active Entity |
-| Input Parameter | Motion Device Name | String | Identifier for this motion device |
-| Input Parameter | Stop All Basic Motion Devices | Boolean | If set to True, stops all Basic Motion Devices on this Entity. If set to False, stops only the Motion Device whose name matches the specified Motion Device |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Target Entity (Thực thể Mục tiêu) | Entity (Thực thể) | Thực thể Đang hoạt động |
+| Input Parameter (Đầu vào) | Motion Device Name (Tên Thiết bị Chuyển động) | String (Chuỗi) | Mã định danh cho thiết bị chuyển động này |
+| Input Parameter (Đầu vào) | Stop All Basic Motion Devices (Dừng Tất cả Thiết bị Chuyển động Cơ bản) | Boolean (Logic) | Nếu đặt thành True, sẽ dừng tất cả Thiết bị Chuyển động Cơ bản trên Thực thể này. Nếu đặt thành False, chỉ dừng Thiết bị Chuyển động có tên khớp với thiết bị được chỉ định |
 
-## **8. Pause Basic Motion Device**
+## **8. Pause Basic Motion Device (Tạm dừng Thiết bị Chuyển động Cơ bản)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Pause a running Motion Device. The Resume Motion Device node can then be used to resume it
+Tạm dừng một Thiết bị Chuyển động đang chạy. Node Resume Motion Device (Tiếp tục Thiết bị Chuyển động) sau đó có thể được sử dụng để tiếp tục.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Target Entity | Entity | Active Entity |
-| Input Parameter | Motion Device Name | String | Identifier for this motion device |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Target Entity (Thực thể Mục tiêu) | Entity (Thực thể) | Thực thể Đang hoạt động |
+| Input Parameter (Đầu vào) | Motion Device Name (Tên Thiết bị Chuyển động) | String (Chuỗi) | Mã định danh cho thiết bị chuyển động này |
 
-# XIII. Follow Motion Device
+# XIII. Follow Motion Device (Thiết bị Chuyển động Theo dõi)
 
-## **1. Activate/Disable Follow Motion Device**
+## **1. Activate/Disable Follow Motion Device (Kích hoạt/Vô hiệu hóa Thiết bị Chuyển động Theo dõi)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Enable/Disable the Follow Motion Device logic on the Target Entity
+Bật/Tắt logic của Thiết bị Chuyển động Theo dõi trên Thực thể Mục tiêu.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Target Entity | Entity | Entity that a Follow Motion Device is attached to |
-| Input Parameter | Activate | Boolean | Set to True to activate |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Target Entity (Thực thể Mục tiêu) | Entity (Thực thể) | Thực thể mà Thiết bị Chuyển động Theo dõi được gắn vào |
+| Input Parameter (Đầu vào) | Activate (Kích hoạt) | Boolean (Logic) | Đặt thành True để kích hoạt |
 
-## **2. Switch Follow Motion Device Target by GUID**
-
-![]()
+## **2. Switch Follow Motion Device Target by GUID (Chuyển đổi Mục tiêu của Thiết bị Chuyển động Theo dõi theo GUID)**
 
 ![]()
 
-**Node Functions**
+![]()
 
-Switch the Follow Target of the Follow Motion Device by GUID
+**Node Functions (Chức năng Node)**
 
-**Node Parameters**
+Chuyển đổi Mục tiêu Theo dõi của Thiết bị Chuyển động Theo dõi bằng GUID.
+
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Target Entity | Entity | Entity that a Follow Motion Device is attached to |
-| Input Parameter | Follow Target GUID | GUID | Identifier for the Follow Target |
-| Input Parameter | Follow Target Attachment Point Name | String | Name of the Attachment Point to follow |
-| Input Parameter | Location Offset | 3D Vector | Location Offset based on the Follow Coordinate System |
-| Input Parameter | Rotation Offset | 3D Vector | Rotation Offset based on the Follow Coordinate System |
-| Input Parameter | Follow Coordinate System | Enumeration | Options: Relative Coordinate System or World Coordinate System |
-| Input Parameter | Follow Type | Enumeration | Options: Completely Follow, Follow Location, Follow Rotation |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Target Entity (Thực thể Mục tiêu) | Entity (Thực thể) | Thực thể mà Thiết bị Chuyển động Theo dõi được gắn vào |
+| Input Parameter (Đầu vào) | Follow Target GUID (GUID của Mục tiêu Theo dõi) | GUID | Mã định danh cho Mục tiêu Theo dõi |
+| Input Parameter (Đầu vào) | Follow Target Attachment Point Name (Tên Điểm đính kèm của Mục tiêu Theo dõi) | String (Chuỗi) | Tên của Điểm Đính kèm cần theo dõi |
+| Input Parameter (Đầu vào) | Location Offset (Độ lệch Vị trí) | 3D Vector | Độ lệch vị trí dựa trên Hệ tọa độ Theo dõi |
+| Input Parameter (Đầu vào) | Rotation Offset (Độ lệch Góc quay) | 3D Vector | Độ lệch góc quay dựa trên Hệ tọa độ Theo dõi |
+| Input Parameter (Đầu vào) | Follow Coordinate System (Hệ tọa độ Theo dõi) | Enumeration (Liệt kê) | Tùy chọn: Hệ tọa độ Tương đối (Relative Coordinate System) hoặc Hệ tọa độ Thế giới (World Coordinate System) |
+| Input Parameter (Đầu vào) | Follow Type (Kiểu Theo dõi) | Enumeration (Liệt kê) | Tùy chọn: Theo dõi Hoàn toàn (Completely Follow), Theo dõi Vị trí (Follow Location), Theo dõi Góc quay (Follow Rotation) |
 
-## **3. Switch Follow Motion Device Target by Entity**
+## **3. Switch Follow Motion Device Target by Entity (Chuyển đổi Mục tiêu của Thiết bị Chuyển động Theo dõi theo Thực thể)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Switch the Follow Target of the Follow Motion Device by Entity
+Chuyển đổi Mục tiêu Theo dõi của Thiết bị Chuyển động Theo dõi bằng Thực thể.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
+
+| Input Parameter (Đầu vào) | Overwrite Level (Ghi đè Cấp độ) | Boolean (Logic) | Khi đặt thành False, tham số [Level] (Cấp độ) không có tác dụng |
+| Input Parameter (Đầu vào) | Level (Cấp độ) | Integer (Số nguyên) | Xác định Cấp độ khi thực thể được tạo ra |
+| Input Parameter (Đầu vào) | Unit Tag Index List (Danh sách Chỉ mục Thẻ Đơn vị) | Integer List (Danh sách Số nguyên) | Xác định các Thẻ Đơn vị được mang theo khi thực thể này được tạo |
+| Output Parameter (Đầu ra) | Created Entity (Thực thể Được tạo) | Entity (Thực thể) | Thực thể này kế thừa các thuộc tính của Cấu hình mẫu Vật thể bay (Projectile Prefab) |
+
+# XV. Special Effects (Hiệu ứng Đặc biệt)
+
+## **1. Play Timed Effects (Phát Hiệu ứng Định giờ)**
+
+![]()
+
+![]()
+
+**Node Functions (Chức năng Node)**
+
+Phát một Hiệu ứng Định giờ (Timed Effect) liên quan đến Thực thể Mục tiêu. Bắt buộc phải có một Thực thể Mục tiêu và Điểm đính kèm (Attachment Point) hợp lệ.
+
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Target Entity | Entity | Entity that a Follow Motion Device is attached to |
-| Input Parameter | Follow Target Entity | Entity | The Entity that follows the Target |
-| Input Parameter | Follow Target Attachment Point Name | String | Name of the Attachment Point to follow |
-| Input Parameter | Location Offset | 3D Vector | Location Offset based on the Follow Coordinate System |
-| Input Parameter | Rotation Offset | 3D Vector | Rotation Offset based on the Follow Coordinate System |
-| Input Parameter | Follow Coordinate System | Enumeration | Options: Relative Coordinate System or World Coordinate System |
-| Input Parameter | Follow Type | Enumeration | Options: Completely Follow, Follow Location, Follow Rotation |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Special Effects Asset (Tài sản Hiệu ứng Đặc biệt) | Config ID (ID Cấu hình) | Mã định danh cho Hiệu ứng này |
+| Input Parameter (Đầu vào) | Target Entity (Thực thể Mục tiêu) | Entity (Thực thể) | Nếu Thực thể không tồn tại, Hiệu ứng sẽ không phát |
+| Input Parameter (Đầu vào) | Attachment Point Name (Tên Điểm Đính kèm) | String (Chuỗi) | Nếu Tên Điểm Đính kèm không tồn tại, Hiệu ứng Đặc biệt sẽ không phát |
+| Input Parameter (Đầu vào) | Move With the Target (Di chuyển Cùng Mục tiêu) | Boolean (Logic) | Nếu đặt thành True, sẽ đi theo Chuyển động của Thực thể Mục tiêu |
+| Input Parameter (Đầu vào) | Rotate With the Target (Xoay Cùng Mục tiêu) | Boolean (Logic) | Nếu đặt thành True, sẽ đi theo Góc quay của Thực thể Mục tiêu |
+| Input Parameter (Đầu vào) | Location Offset (Độ lệch Vị trí) | 3D Vector | Độ lệch Vị trí so với Điểm Đính kèm được chỉ định của Thực thể Mục tiêu |
+| Input Parameter (Đầu vào) | Rotation Offset (Độ lệch Góc quay) | 3D Vector | Độ lệch góc quay so với Điểm Đính kèm được chỉ định của Thực thể Mục tiêu |
+| Input Parameter (Đầu vào) | Zoom Multiplier (Hệ số Thu phóng) | Floating Point Numbers (Số thực) | Hệ số Thu phóng của Hiệu ứng này |
+| Input Parameter (Đầu vào) | Play Built-In Sound Effect (Phát Hiệu ứng Âm thanh Tích hợp) | Boolean (Logic) | Nếu đặt thành True, cũng sẽ phát Hiệu ứng Âm thanh Tích hợp |
 
-# XIV. Projectiles
-
-## **1. Create Projectile**
-
-![]()
+## **2. Clear Special Effects Based on Special Effect Assets (Xóa các Hiệu ứng Đặc biệt Dựa trên Tài sản Hiệu ứng Đặc biệt)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Create a Projectile Entity using the Prefab ID. This function is similar to [Create Prefab], but includes an additional [Track Target] parameter, which sets the tracking target for projectiles of the Tracking type in the Projectile Motion Device Component of the created Entity
+Xóa tất cả các Hiệu ứng trên Thực thể Mục tiêu được chỉ định có sử dụng Tài sản Hiệu ứng đã cho. Chỉ áp dụng cho Hiệu ứng Vòng lặp (Looping Effects).
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Prefab ID | Prefab ID | Identifier for this Projectile Prefab |
-| Input Parameter | Location | 3D Vector | Absolute Location |
-| Input Parameter | Rotate | 3D Vector | Absolute Rotation |
-| Input Parameter | Owner Entity | Entity | Determines whether the created entity belongs to another entity |
-| Input Parameter | Track Target | Entity | The Tracking Target set by the Tracking Projectile type in the Projectile Motion Device component |
-| Input Parameter | Overwrite Level | Boolean | When set to False, the [Level] parameter has no effect |
-| Input Parameter | Level | Integer | Determines the Level when the entity is created |
-| Input Parameter | Unit Tag Index List | Integer List | Determines the Unit Tags carried when this entity is created |
-| Output Parameter | Created Entity | Entity | This Entity inherits the attributes of the Projectile Prefab |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Target Entity (Thực thể Mục tiêu) | Entity (Thực thể) | Thực thể Đang hoạt động |
+| Input Parameter (Đầu vào) | Special Effects Asset (Tài sản Hiệu ứng Đặc biệt) | Config ID (ID Cấu hình) | Mã định danh cho Hiệu ứng này |
 
-# XV. Special Effects
-
-## **1. Play Timed Effects**
+## **3. Mount Looping Special Effect (Gắn Hiệu ứng Đặc biệt Vòng lặp)**
 
 ![]()
 
-![]()
+**Node Functions (Chức năng Node)**
 
-**Node Functions**
+Gắn một Hiệu ứng Vòng lặp liên quan đến Thực thể Mục tiêu. Bắt buộc phải có Thực thể Mục tiêu và Điểm Đính kèm hợp lệ.
 
-Play a Timed Effect relative to the Target Entity. A valid Target Entity and Attachment Point are required
+Node này trả về một ID Phiên bản Hiệu ứng (Effect Instance ID) có thể được lưu trữ. Sau này, khi sử dụng node [Clear Looping Effects] (Xóa Hiệu ứng Vòng lặp), hãy sử dụng ID Phiên bản Hiệu ứng này để xóa Hiệu ứng Vòng lặp đã chỉ định.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Special Effects Asset | Config ID | Identifier for this Effect |
-| Input Parameter | Target Entity | Entity | If the Entity does not exist, the Effect will not play |
-| Input Parameter | Attachment Point Name | String | If the Attachment Point Name does not exist, the Special Effect will not play |
-| Input Parameter | Move With the Target | Boolean | If set to True, follows the Target Entity's Motion |
-| Input Parameter | Rotate With the Target | Boolean | If set to True, follows the Target Entity's Rotation |
-| Input Parameter | Location Offset | 3D Vector | Location Offset relative to the Target Entity's specified Attachment Point |
-| Input Parameter | Rotation Offset | 3D Vector | Rotation offset relative to the Target Entity's specified Attachment Point |
-| Input Parameter | Zoom Multiplier | Floating Point Numbers | The Zoom Multiplier of this Effect |
-| Input Parameter | Play Built-In Sound Effect | Boolean | If set to True, plays the built-in Sound Effect as well |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Special Effects Asset (Tài sản Hiệu ứng Đặc biệt) | Config ID (ID Cấu hình) | Mã định danh cho Hiệu ứng này |
+| Input Parameter (Đầu vào) | Target Entity (Thực thể Mục tiêu) | Entity (Thực thể) | Nếu Thực thể không tồn tại, Hiệu ứng sẽ không phát |
+| Input Parameter (Đầu vào) | Attachment Point Name (Tên Điểm Đính kèm) | String (Chuỗi) | Nếu Tên Điểm Đính kèm không tồn tại, Hiệu ứng Đặc biệt sẽ không phát |
+| Input Parameter (Đầu vào) | Move With the Target (Di chuyển Cùng Mục tiêu) | Boolean (Logic) | Nếu đặt thành True, sẽ đi theo Chuyển động của Thực thể Mục tiêu |
+| Input Parameter (Đầu vào) | Rotate With the Target (Xoay Cùng Mục tiêu) | Boolean (Logic) | Nếu đặt thành True, sẽ đi theo Góc quay của Thực thể Mục tiêu |
+| Input Parameter (Đầu vào) | Location Offset (Độ lệch Vị trí) | 3D Vector | Độ lệch Vị trí so với Điểm Đính kèm được chỉ định của Thực thể Mục tiêu |
+| Input Parameter (Đầu vào) | Rotation Offset (Độ lệch Góc quay) | 3D Vector | Độ lệch góc quay so với Điểm Đính kèm được chỉ định của Thực thể Mục tiêu |
+| Input Parameter (Đầu vào) | Zoom Multiplier (Hệ số Thu phóng) | Floating Point Numbers (Số thực) | Hệ số Thu phóng của Hiệu ứng này |
+| Input Parameter (Đầu vào) | Play Built-In Sound Effect (Phát Hiệu ứng Âm thanh Tích hợp) | Boolean (Logic) | Chuyển sang Yes để phát hiệu ứng âm thanh tích hợp |
+| Output Parameter (Đầu ra) | Special Effect Instance ID (ID Phiên bản Hiệu ứng Đặc biệt) | Integer (Số nguyên) | ID Phiên bản tự động được tạo ra khi gắn Hiệu ứng này |
 
-## **2. Clear Special Effects Based on Special Effect Assets**
+## **4. Clear Looping Special Effect (Xóa Hiệu ứng Đặc biệt Vòng lặp)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Clear all Effects on the specified Target Entity that use the given Effect Asset. Applies to Looping Effects only
+Xóa Hiệu ứng Vòng lặp đã chỉ định trên Thực thể Mục tiêu bằng ID Phiên bản Hiệu ứng. Sau khi gắn thành công, node [Mount Looping Effect] sẽ tạo ra một ID Phiên bản Hiệu ứng.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Target Entity | Entity | Active Entity |
-| Input Parameter | Special Effects Asset | Config ID | Identifier for this Effect |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Special Effect Instance ID (ID Phiên bản Hiệu ứng Đặc biệt) | Integer (Số nguyên) | ID Phiên bản tự động được tạo bởi node Mount Looping Special Effect (Gắn Hiệu ứng Đặc biệt Vòng lặp) |
+| Input Parameter (Đầu vào) | Target Entity (Thực thể Mục tiêu) | Entity (Thực thể) | Thực thể Đang hoạt động |
 
-## **3. Mount Looping Special Effect**
+# XVI. Timer (Đồng hồ hẹn giờ / Bộ định thời gian)
+
+## **1. Resume Timer (Tiếp tục Bộ định thời gian)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Mount a Looping Effect relative to the Target Entity. A valid Target Entity and Attachment Point are required
+Tiếp tục một Bộ định thời gian (Timer) đang tạm dừng trên Thực thể Mục tiêu.
 
-This node returns an Effect Instance ID that can be stored. When using the [Clear Looping Effects] node later, use this Effect Instance ID to clear the specified Looping Effect
-
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Special Effects Asset | Config ID | Identifier for this Effect |
-| Input Parameter | Target Entity | Entity | If the Entity does not exist, the Effect will not play |
-| Input Parameter | Attachment Point Name | String | If the Attachment Point Name does not exist, the Special Effect will not play |
-| Input Parameter | Move With the Target | Boolean | If set to True, follows the Target Entity's Motion |
-| Input Parameter | Rotate With the Target | Boolean | If set to True, follows the Target Entity's Rotation |
-| Input Parameter | Location Offset | 3D Vector | Location Offset relative to the Target Entity's specified Attachment Point |
-| Input Parameter | Rotation Offset | 3D Vector | Rotation offset relative to the Target Entity's specified Attachment Point |
-| Input Parameter | Zoom Multiplier | Floating Point Numbers | The Zoom Multiplier of this Effect |
-| Input Parameter | Play Built-In Sound Effect | Boolean | Toggle to Yes to play built-in sound effects |
-| Output Parameter | Special Effect Instance ID | Integer | The Instance ID automatically generated when mounting this Effect |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Target Entity (Thực thể Mục tiêu) | Entity (Thực thể) | Thực thể Đang hoạt động |
+| Input Parameter (Đầu vào) | Timer Name (Tên Bộ định thời gian) | String (Chuỗi) | Mã định danh Bộ định thời gian |
 
-## **4. Clear Looping Special Effect**
+## **2. Start Timer (Khởi động Bộ định thời gian)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Clear the specified Looping Effect on the Target Entity by Effect Instance ID. After a successful mount, the [Mount Looping Effect] node generates an Effect Instance ID
+Khởi động một Bộ định thời gian trên Thực thể Mục tiêu.
 
-**Node Parameters**
+Bộ định thời gian được xác định duy nhất bằng tên của nó.
+
+Bộ định thời gian bao gồm một Chuỗi Thời gian (Timer Sequence) có lặp lại hoặc không lặp lại. Chuỗi Thời gian là một tập hợp các mốc thời gian tính bằng giây được sắp xếp theo thứ tự tăng dần; khi Bộ định thời gian đạt đến các mốc này, nó sẽ kích hoạt sự kiện [On Timer Triggered] (Khi Bộ định thời gian Kích hoạt). Chiều dài tối đa của một Chuỗi Thời gian là 100.
+
+Ví dụ: nếu bạn nhập Chuỗi Thời gian [1, 3, 5, 7], sự kiện [On Timer Triggered] sẽ kích hoạt ở các giây 1s, 3s, 5s và 7s.
+
+Khi tính năng Vòng lặp (Loop) được đặt thành "Yes", Bộ định thời gian sẽ khởi động lại từ 0s sau khi đạt đến mốc thời gian cuối cùng. Đối với [1, 3, 5, 7], nó sẽ khởi động lại từ 0s sau khi đạt đến 7s.
+
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Special Effect Instance ID | Integer | Instance ID automatically generated by the Mount Looping Special Effect node |
-| Input Parameter | Target Entity | Entity | Active Entity |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Target Entity (Thực thể Mục tiêu) | Entity (Thực thể) | Thực thể Đang hoạt động |
+| Input Parameter (Đầu vào) | Timer Name (Tên Bộ định thời gian) | String (Chuỗi) | Mã định danh Bộ định thời gian |
+| Input Parameter (Đầu vào) | Loop (Vòng lặp) | Boolean (Logic) | Nếu đặt thành True, Chuỗi Thời gian sẽ thực thi theo vòng lặp |
+| Input Parameter (Đầu vào) | Timer Sequence (Chuỗi Thời gian) | Floating Point Number List (Danh sách Số thực) | Cung cấp danh sách được sắp xếp theo thứ tự tăng dần. Nếu danh sách không hợp lệ (không tăng dần một cách nghiêm ngặt, chứa số âm, v.v.), Bộ định thời gian sẽ không chạy |
 
-# XVI. Timer
-
-## **1. Resume Timer**
+## **3. Pause Timer (Tạm dừng Bộ định thời gian)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Resume a paused Timer on the Target Entity
+Tạm dừng Bộ định thời gian được chỉ định trên Thực thể Mục tiêu. Node [Resume Timer] (Tiếp tục Bộ định thời gian) sau đó có thể được sử dụng để tiếp tục quá trình đếm ngược.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Target Entity | Entity | Active Entity |
-| Input Parameter | Timer Name | String | Timer Identifier |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Target Entity (Thực thể Mục tiêu) | Entity (Thực thể) | Thực thể Đang hoạt động |
+| Input Parameter (Đầu vào) | Timer Name (Tên Bộ định thời gian) | String (Chuỗi) | Mã định danh Bộ định thời gian |
 
-## **2. Start Timer**
+## **4. Stop Timer (Dừng Bộ định thời gian)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Start a Timer on the Target Entity
+Kết thúc hoàn toàn Bộ định thời gian được chỉ định trên Thực thể Mục tiêu; không thể tiếp tục được nữa.
 
-The Timer is uniquely identified by its name
-
-A Timer consists of a looping or non-looping Timer Sequence. The Timer Sequence is a set of time points in seconds arranged in ascending order; when the Timer reaches these points, it triggers the [On Timer Triggered] event. The maximum length of a Timer Sequence is 100
-
-For example, if you input the Timer Sequence [1, 3, 5, 7], the [On Timer Triggered] event fires at 1s, 3s, 5s, and 7s
-
-When Loop is set to "Yes," the Timer restarts from 0s after reaching the last time point. For [1, 3, 5, 7], it restarts from 0s after reaching 7s
-
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Target Entity | Entity | Active Entity |
-| Input Parameter | Timer Name | String | Timer Identifier |
-| Input Parameter | Loop | Boolean | If set to True, the Timer Sequence executes in a loop |
-| Input Parameter | Timer Sequence | Floating Point Number List | Provide a list sorted in ascending order. If the list is invalid (not strictly ascending, contains negatives, etc.), the Timer will not run |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Target Entity (Thực thể Mục tiêu) | Entity (Thực thể) | Thực thể Đang hoạt động |
+| Input Parameter (Đầu vào) | Timer Name (Tên Bộ định thời gian) | String (Chuỗi) | Mã định danh Bộ định thời gian |
 
-## **3. Pause Timer**
+# XVII. Global Timer (Bộ định thời gian Toàn cục)
+
+## **1. Recover Global Timer (Khôi phục Bộ định thời gian Toàn cục)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Pauses the specified Timer on the Target Entity. The [Resume Timer] node can then be used to resume its countdown
+Tiếp tục Bộ định thời gian Toàn cục đang tạm dừng trên Thực thể Mục tiêu.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Target Entity | Entity | Active Entity |
-| Input Parameter | Timer Name | String | Timer Identifier |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Target Entity (Thực thể Mục tiêu) | Entity (Thực thể) | Thực thể Đang hoạt động |
+| Input Parameter (Đầu vào) | Timer Name (Tên Bộ định thời gian) | String (Chuỗi) | Mã định danh của Bộ định thời gian. Chỉ những Tên Bộ định thời gian được cấu hình trong Quản lý Bộ định thời gian (Timer Management) mới có thể được tham chiếu |
 
-## **4. Stop Timer**
+## **2. Start Global Timer (Khởi động Bộ định thời gian Toàn cục)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Completely terminate the specified Timer on the Target Entity; it cannot be resumed
+Khởi động một Bộ định thời gian Toàn cục trên Thực thể Mục tiêu.
 
-**Node Parameters**
+Bộ định thời gian trên Thực thể Mục tiêu được xác định duy nhất bằng tên của nó.
+
+Dựa trên cài đặt Quản lý Bộ định thời gian, Bộ định thời gian Đếm ngược (Countdown Timer) và Bấm giờ (Stopwatch Timer) sẽ được tạo tương ứng.
+
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Target Entity | Entity | Active Entity |
-| Input Parameter | Timer Name | String | Timer Identifier |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Target Entity (Thực thể Mục tiêu) | Entity (Thực thể) | Thực thể Đang hoạt động |
+| Input Parameter (Đầu vào) | Timer Name (Tên Bộ định thời gian) | String (Chuỗi) | Mã định danh của Bộ định thời gian. Chỉ những Tên Bộ định thời gian được cấu hình trong Quản lý Bộ định thời gian mới có thể được tham chiếu |
 
-# XVII. Global Timer
-
-## **1. Recover Global Timer**
+## **3.** **Increase Global Timer Value (Tăng Giá trị Bộ định thời gian Toàn cục)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Resume a paused Global Timer on the Target Entity
+Điều chỉnh thời gian của Bộ định thời gian Toàn cục đang chạy thông qua Node Graph.
 
-**Node Parameters**
+Nếu bộ định thời gian bị tạm dừng trước và sau đó được sửa đổi để giảm thời gian, thời gian đã sửa đổi sẽ ít nhất là 0 giây.
 
-|  |  |  |  |
-| --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Target Entity | Entity | Active Entity |
-| Input Parameter | Timer Name | String | Identifier for the Timer. Only Timer Names configured in Timer Management can be referenced |
-
-## **2. Start Global Timer**
-
-![]()
-
-**Node Functions**
-
-Start a Global Timer on the Target Entity
-
-The Timer on the Target Entity is uniquely identified by its name
-
-Based on Timer Management settings, Countdown and Stopwatch Timers are created accordingly
-
-**Node Parameters**
-
-|  |  |  |  |
-| --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Target Entity | Entity | Active Entity |
-| Input Parameter | Timer Name | String | Identifier for the Timer. Only Timer Names configured in Timer Management can be referenced |
-
-## **3.** **Increase Global Timer Value**
-
-![]()
-
-**Node Functions**
-
-Adjust the time of a running Global Timer via the Node Graph
-
-If the timer is paused first and then modified to reduce the time, the modified time will be at least 0 seconds.
-
-For countdown timers, pausing followed by modifying the time to 0s will trigger the [When the Global Timer Is Triggered] event upon resuming the timer.
+Đối với bộ đếm ngược (countdown timer), việc tạm dừng rồi chỉnh sửa thời gian thành 0s sẽ kích hoạt sự kiện [Khi Bộ định thời gian Toàn cục được Kích hoạt] (When the Global Timer Is Triggered) ngay sau khi tiếp tục bộ đếm ngược.
 
 If the timer is paused first, then modified to 0s, followed by modifying the time to increase it, and finally resumed, the [When the Global Timer Is Triggered] event will not be triggered.
 
