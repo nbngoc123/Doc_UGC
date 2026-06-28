@@ -1,123 +1,123 @@
-# Query Nodes
+# Query Nodes (Node Truy vấn)
 
-# I. General
+# I. General (Cài đặt chung)
 
 1.
 
-## **Query Game Mode and Player Number**
+## **Query Game Mode and Player Number (Truy vấn Chế độ Chơi và Số lượng Người chơi)**
 
 ![](./query node_files/1e946aa2-4367-4b69-a494-dfea96b3b0c3.png)
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Searches the theoretical number of players entering the match, including players via Matchmaking or Room creation, and the method of entry
+Truy tìm số lượng người chơi lý thuyết bước vào trận đấu, bao gồm người chơi thông qua Ghép trận (Matchmaking) hoặc tạo Phòng (Room creation), và phương thức tham gia.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Output Parameter | Player Count | Integer |  |
-| Output Parameter | Gameplay Mode | Enumeration | Includes Playtest, Room Play, and Matchmaking Play |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Output Parameter (Đầu ra) | Player Count (Số lượng người chơi) | Integer (Số nguyên) |  |
+| Output Parameter (Đầu ra) | Gameplay Mode (Chế độ Gameplay) | Enumeration (Liệt kê) | Bao gồm Playtest (Thử nghiệm), Room Play (Chơi trong Phòng) và Matchmaking Play (Chơi Ghép trận) |
 
-## **2. Get Local Variable**
+## **2. Get Local Variable (Lấy Biến Cục bộ)**
 
 ![](./query node_files/d16b125b-1793-4cdb-8891-5ef49a03b7dc.png)
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Retrieves a Local Variable and optionally sets its [Initial Value]
+Truy xuất một Biến Cục bộ (Local Variable) và tùy ý đặt [Initial Value] (Giá trị Ban đầu) cho nó.
 
-After setting the [Initial Value], the [Value] output parameter will be equal to the input [Initial Value]
+Sau khi đặt [Initial Value], tham số đầu ra [Value] (Giá trị) sẽ bằng với [Initial Value] được truyền vào.
 
-When the output [Local Variable] is connected to the [Set Local Variable] Execution Node's input [Local Variable], the input [Value] of [Set Local Variable] overwrites this Search Node's output [Value]. The next time you use [Get Local Variable], the output [Value] is the overwritten value
+Khi [Local Variable] (Biến Cục bộ) đầu ra được kết nối với đầu vào [Local Variable] của Node Thực thi [Set Local Variable] (Đặt Biến Cục bộ), tham số đầu vào [Value] của node [Set Local Variable] sẽ ghi đè lên tham số đầu ra [Value] của Node Truy vấn này. Lần tiếp theo bạn sử dụng [Get Local Variable], đầu ra [Value] sẽ là giá trị đã được ghi đè.
 
-**Node Parameters**
-
-|  |  |  |  |
-| --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Initial Value | Generic | Allows you to set the default initial value for local variables |
-| Output Parameter | Local Variable | Local Variable | Container for data storage |
-| Output Parameter | Value | Generic | When not Overwritten, this value equals the Initial Value; after it is Overwritten, it equals the new value |
-
-# II. Math
-
-## **1. Query Server Time Zone**
-
-![]()
-
-**Node Functions**
-
-Searches the Server's timezone
-
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Output Parameter | Time Zone | Integer |  |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Initial Value (Giá trị Ban đầu) | Generic (Chung) | Cho phép bạn thiết lập giá trị ban đầu mặc định cho các biến cục bộ |
+| Output Parameter (Đầu ra) | Local Variable (Biến Cục bộ) | Local Variable (Biến Cục bộ) | Vùng chứa để lưu trữ dữ liệu |
+| Output Parameter (Đầu ra) | Value (Giá trị) | Generic (Chung) | Khi không bị Ghi đè, giá trị này bằng Giá trị Ban đầu; sau khi bị Ghi đè, nó bằng giá trị mới |
 
-## **2. Query Timestamp (UTC+0)**
+# II. Math (Toán học)
+
+## **1. Query Server Time Zone (Truy vấn Múi giờ Máy chủ)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Searches the current timestamp
+Truy tìm Múi giờ của Máy chủ.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Output Parameter | Timestamp | Integer |  |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Output Parameter (Đầu ra) | Time Zone (Múi giờ) | Integer (Số nguyên) |  |
 
-## **3. Get Random Floating Point Number**
+## **2. Query Timestamp (UTC+0) (Truy vấn Dấu thời gian (UTC+0))**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Returns a random Floating Point Number that is ≥ the lower limit and ≤ the upper limit. The range is inclusive
+Truy tìm Dấu thời gian hiện tại.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Lower Limit | Floating Point Numbers |  |
-| Input Parameter | Upper Limit | Floating Point Numbers |  |
-| Output Parameter | Result | Floating Point Numbers |  |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Output Parameter (Đầu ra) | Timestamp (Dấu thời gian) | Integer (Số nguyên) |  |
 
-## **4. Get Random Integer**
+## **3. Get Random Floating Point Number (Lấy Số thực Ngẫu nhiên)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Returns a random Integer that is ≥ the lower limit and ≤ the upper limit. The range is inclusive
+Trả về một Số thực Ngẫu nhiên lớn hơn hoặc bằng (≥) giới hạn dưới và nhỏ hơn hoặc bằng (≤) giới hạn trên. Phạm vi này bao gồm cả hai giới hạn.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Lower Limit | Integer |  |
-| Input Parameter | Upper Limit | Integer |  |
-| Output Parameter | Result | Integer |  |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Lower Limit (Giới hạn Dưới) | Floating Point Numbers (Số thực) |  |
+| Input Parameter (Đầu vào) | Upper Limit (Giới hạn Trên) | Floating Point Numbers (Số thực) |  |
+| Output Parameter (Đầu ra) | Result (Kết quả) | Floating Point Numbers (Số thực) |  |
 
-## **5. Weighted Random**
+## **4. Get Random Integer (Lấy Số nguyên Ngẫu nhiên)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Takes a list of weights and randomly selects an ID based on the weight distribution
+Trả về một Số nguyên Ngẫu nhiên lớn hơn hoặc bằng (≥) giới hạn dưới và nhỏ hơn hoặc bằng (≤) giới hạn trên. Phạm vi này bao gồm cả hai giới hạn.
 
-For example, with a weight list {10, 20, 66, 4}, this node outputs 0, 1, 2, or 3 with probabilities 10%, 20%, 66%, and 4% respectively
+**Node Parameters (Tham số Node)**
 
-**Node Parameters**
+|  |  |  |  |
+| --- | --- | --- | --- |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Lower Limit (Giới hạn Dưới) | Integer (Số nguyên) |  |
+| Input Parameter (Đầu vào) | Upper Limit (Giới hạn Trên) | Integer (Số nguyên) |  |
+| Output Parameter (Đầu ra) | Result (Kết quả) | Integer (Số nguyên) |  |
+
+## **5. Weighted Random (Ngẫu nhiên có Trọng số)**
+
+![]()
+
+**Node Functions (Chức năng Node)**
+
+Nhận một danh sách trọng số và chọn ngẫu nhiên một ID dựa trên phân bố trọng số.
+
+Ví dụ, với danh sách trọng số {10, 20, 66, 4}, node này sẽ xuất ra 0, 1, 2, hoặc 3 với xác suất tương ứng là 10%, 20%, 66%, và 4%.
+
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -125,7 +125,7 @@ For example, with a weight list {10, 20, 66, 4}, this node outputs 0, 1, 2, or 3
 | Input Parameter | Weight List | Integer List |  |
 | Output Parameter | Weight ID | Integer |  |
 
-## **6. 3D Vector: Backward**
+## **6. 3D Vector: Backward (Vector 3D: Lùi)**
 
 ![]()
 
@@ -140,7 +140,7 @@ Return (0,0,-1)
 | **Parameter Type** | **Parameter Name** | **Type** | **Description** |
 | Output Parameter | (0,0,-1) | 3D Vector |  |
 
-## **7. 3D Vector: Zero Vector**
+## **7. 3D Vector: Zero Vector (Vector 3D: Không)**
 
 ![]()
 
@@ -155,7 +155,7 @@ Return (0,0,0)
 | **Parameter Type** | **Parameter Name** | **Type** | **Description** |
 | Output Parameter | (0,0,0) | 3D Vector |  |
 
-## **8. 3D Vector: Forward**
+## **8. 3D Vector: Forward (Vector 3D: Tiến)**
 
 ![]()
 
@@ -170,7 +170,7 @@ Return (0,0,1)
 | **Parameter Type** | **Parameter Name** | **Type** | **Description** |
 | Output Parameter | (0,0,1) | 3D Vector |  |
 
-## **9. 3D Vector: Up**
+## **9. 3D Vector: Up (Vector 3D: Lên)**
 
 ![]()
 
@@ -185,7 +185,7 @@ Return (0,1,0)
 | **Parameter Type** | **Parameter Name** | **Type** | **Description** |
 | Output Parameter | (0,1,0) | 3D Vector |  |
 
-## **10. 3D Vector: Down**
+## **10. 3D Vector: Down (Vector 3D: Xuống)**
 
 ![]()
 
@@ -200,7 +200,7 @@ Return (0,-1,0)
 | **Parameter Type** | **Parameter Name** | **Type** | **Description** |
 | Output Parameter | (0,-1,0) | 3D Vector |  |
 
-## **11. 3D Vector: Right**
+## **11. 3D Vector: Right (Vector 3D: Phải)**
 
 ![]()
 
@@ -215,7 +215,7 @@ Return (1,0,0)
 | **Parameter Type** | **Parameter Name** | **Type** | **Description** |
 | Output Parameter | (1,0,0) | 3D Vector |  |
 
-## **12. 3D Vector: Left**
+## **12. 3D Vector: Left (Vector 3D: Trái)**
 
 ![]()
 
@@ -230,7 +230,7 @@ Return (-1,0,0)
 | **Parameter Type** | **Parameter Name** | **Type** | **Description** |
 | Output Parameter | (-1,0,0) | 3D Vector |  |
 
-## **13. Pi (π)**
+## **13. Pi (π) (Pi - Số π)**
 
 ![]()
 
@@ -401,7 +401,7 @@ If the variable does not exist, returns the type's default value
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
 | Input Parameter | Target Entity | Entity |  |
 | Input Parameter | Variable Name | String |  |
 | Output Parameter | Variable Value | Generic |  |
@@ -573,24 +573,24 @@ Returns the Entity Type of the Target Entity
 | Input Parameter | Target Entity | Entity |  |
 | Output Parameter | Entity Type | Enumeration | Includes Player, Character, Stage, Object, Creation. |
 
-## **9. Get Entity Location and Rotation**
+## **9. Get Entity Location and Rotation (Lấy Vị trí và Góc quay của Thực thể)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Returns the Location and Rotation of the Target Entity
+Trả về thông tin Vị trí (Location) và Góc quay (Rotation) của Thực thể Mục tiêu (Target Entity).
 
-Not applicable to Player Entities or Stage Entities
+Không áp dụng cho Thực thể Người chơi (Player Entities) hoặc Thực thể Màn chơi (Stage Entities).
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
-|  |  |  |  |
+| | | | |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Target Entity | Entity |  |
-| Output Parameter | Location | 3D Vector |  |
-| Output Parameter | Rotate | 3D Vector |  |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Target Entity (Thực thể Mục tiêu) | Entity (Thực thể) | Nối với Node "Event Source Entity" để lấy vị trí của chính bức tượng |
+| Output Parameter (Đầu ra) | Location (Vị trí) | 3D Vector | Tọa độ không gian 3 chiều của thực thể |
+| Output Parameter (Đầu ra) | Rotate (Góc quay) | 3D Vector | Hướng mà thực thể đang xoay mặt về |
 
 ## **10. Get Entity Forward Vector**
 

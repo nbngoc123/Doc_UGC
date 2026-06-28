@@ -1,253 +1,243 @@
-# Operation Nodes
+# Operation Nodes (Node Phép Toán)
 
-# I. General
+# I. General (Cài đặt chung)
 
-## **1. Enumerations Equal**
+## **1. Enumerations Equal (Bằng nhau kiểu Liệt kê)**
 
 ![](./operation node_files/10e51bd2-3efb-44e4-87a8-4c3013eb327d.png)
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-After confirming the Enumeration type, determines whether the two input values are equal
+Sau khi xác nhận kiểu Liệt kê (Enumeration), xác định xem hai giá trị đầu vào có bằng nhau hay không.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Enumeration 1 | Generic |  |
-| Input Parameter | Enumeration 2 | Generic |  |
-| Output Parameter | Result | Boolean | Output True if equal, False if not equal |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Enumeration 1 (Liệt kê 1) | Generic (Chung) |  |
+| Input Parameter (Đầu vào) | Enumeration 2 (Liệt kê 2) | Generic (Chung) |  |
+| Output Parameter (Đầu ra) | Result (Kết quả) | Boolean (Logic) | Trả về True nếu bằng nhau, False nếu không bằng nhau |
 
-## **2. Assembly List**
+## **2. Assembly List (Lắp ráp danh sách)**
 
 ![](./operation node_files/a31c67bb-c8a9-443e-9fee-b4deaef799ae.png)
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Assembles multiple Input Parameters of the same type (up to 100) into a single List
+Tập hợp nhiều Tham số Đầu vào (Input Parameters) cùng kiểu (lên đến 100) vào một Danh sách (List) duy nhất.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | 0~99 | Generic | Assembles up to 100 parameters into a list |
-| Output Parameter | List | Generic | The assembled list |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | 0~99 | Generic (Chung) | Tập hợp tối đa 100 tham số thành một danh sách |
+| Output Parameter (Đầu ra) | List (Danh sách) | Generic (Chung) | Danh sách đã được lắp ráp |
 
-## **3. Equal**
+## **3. Equal (Bằng nhau)**
 
 ![](./operation node_files/e64d3d4c-fb18-4611-bd8a-6090453b1e78.png)
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Determines whether two inputs are equal
+Xác định xem hai đầu vào có bằng nhau hay không.
 
-Some Parameter Types have special comparison rules:
+Một số Loại tham số (Parameter Types) có quy tắc so sánh đặc biệt:
 
-Floating Point Numbers: Floating Point Numbers are compared using approximate equality. When the difference between two Floating Point Numbers is less than an extremely small value, the two numbers are considered equal. For example: 2.0000001 and 2.0 are considered equal
+Số thực (Floating Point Numbers): Các số thực được so sánh bằng phương pháp bằng nhau gần đúng (approximate equality). Khi hiệu giữa hai số thực nhỏ hơn một giá trị cực kỳ nhỏ, hai số đó được coi là bằng nhau. Ví dụ: 2.0000001 và 2.0 được coi là bằng nhau.
 
-3D Vector: The x, y, and z components of a 3D Vector are compared using Floating Point approximate equality
+Vecto 3D (3D Vector): Các thành phần x, y và z của một Vecto 3D được so sánh bằng phương pháp bằng nhau gần đúng của số thực.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Input 1 | Generic |  |
-| Input Parameter | Input 2 | Generic |  |
-| Output Parameter | Result | Boolean | Output True if equal, False if not equal |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Input 1 (Đầu vào 1) | Generic (Chung) |  |
+| Input Parameter (Đầu vào) | Input 2 (Đầu vào 2) | Generic (Chung) |  |
+| Output Parameter (Đầu ra) | Result (Kết quả) | Boolean (Logic) | Trả về True nếu bằng nhau, False nếu không bằng nhau |
 
-## **4. Data Type Conversion**
+## **4. Data Type Conversion (Chuyển đổi Kiểu dữ liệu)**
 
 ![](./operation node_files/baf41214-696f-4332-80d7-f94e2177f51a.png)
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Converts input parameter types to another type for output. For specific rules, see Basic Concepts - [Conversion Rules Between Basic Data Types]
+Chuyển đổi các kiểu tham số đầu vào sang kiểu khác để làm đầu ra. Để biết các quy tắc cụ thể, hãy xem Basic Concepts - [Conversion Rules Between Basic Data Types] (Khái niệm Cơ bản - Quy tắc Chuyển đổi giữa Các kiểu Dữ liệu Cơ bản).
 
-Floating point numbers are rounded to integers when converted
+Số thực sẽ được làm tròn thành số nguyên khi chuyển đổi.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Input | Generic |  |
-| Output Parameter | Output | Generic |  |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Input (Đầu vào) | Generic (Chung) |  |
+| Output Parameter (Đầu ra) | Output (Đầu ra) | Generic (Chung) |  |
 
-# II. Math
+# II. Math (Toán học)
 
-## **1. Split 3D Vector**
+## **1. Split 3D Vector (Chia tách Vecto 3D)**
 
 ![](./operation node_files/8a4e18c5-9b47-4db9-b27a-d057e0edfc69.png)
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Outputs the x, y, and z components of a 3D Vector as three Floating Point Numbers
+Xuất ra các thành phần x, y và z của một Vecto 3D dưới dạng ba Số thực.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | 3D Vector | 3D Vector |  |
-| Output Parameter | X-Component | Floating Point Numbers |  |
-| Output Parameter | Y-Component | Floating Point Numbers |  |
-| Output Parameter | Z-Component | Floating Point Numbers |  |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | 3D Vector (Vecto 3D) | 3D Vector |  |
+| Output Parameter (Đầu ra) | X-Component (Thành phần X) | Floating Point Numbers (Số thực) |  |
+| Output Parameter (Đầu ra) | Y-Component (Thành phần Y) | Floating Point Numbers (Số thực) |  |
+| Output Parameter (Đầu ra) | Z-Component (Thành phần Z) | Floating Point Numbers (Số thực) |  |
 
-## **2. Multiplication**
+## **2. Multiplication (Phép nhân)**
 
 ![](./operation node_files/50365d5a-5959-471a-aad5-b0e11e7459ee.png)
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Performs multiplication, supporting Floating Point and Integer multiplication
+Thực hiện phép nhân, hỗ trợ nhân Số thực và Số nguyên.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter |  | Generic |  |
-| Input Parameter |  | Generic |  |
-| Output Parameter | Result | Generic |  |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) |  | Generic (Chung) |  |
+| Input Parameter (Đầu vào) |  | Generic (Chung) |  |
+| Output Parameter (Đầu ra) | Result (Kết quả) | Generic (Chung) |  |
 
-## **3. Division**
+## **3. Division (Phép chia)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
+# **3. Division Operation (Phép chia)**
 
-Performs division, supporting Floating Point division and Integer division. Integer division returns the quotient result
+**Node Functions (Chức năng Node)**
 
-The divisor should not be 0, otherwise it may return an illegal value
+Thực hiện phép chia, hỗ trợ chia số thực và chia số nguyên. Phép chia số nguyên trả về kết quả phần thương.
 
-When the divisor is 0, the result is 0.
+**Lưu ý**:
+- Mẫu số (divisor) không nên bằng 0; nếu bằng 0 có thể trả về giá trị bất hợp pháp.
+- Khi mẫu số bằng 0, kết quả sẽ trả về 0.
+- Giá trị `-2147483648` chia cho `-1` sẽ trả về 0.
 
--2147483648 divided by -1 results in 0.
-
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter |  | Generic |  |
-| Input Parameter |  | Generic |  |
-| Output Parameter | Result | Generic |  |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) |  | Generic (Chung) |  |
+| Input Parameter (Đầu vào) |  | Generic (Chung) |  |
+| Output Parameter (Đầu ra) | Result (Kết quả) | Generic (Chung) |  |
 
-## **4. Create 3D Vector**
+## **4. Create 3D Vector (Tạo Vector 3D)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Creates a 3D Vector from x, y, and z components
+Tạo một Vector 3D từ các thành phần x, y và z.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | X-Component | Floating Point Numbers |  |
-| Input Parameter | Y-Component | Floating Point Numbers |  |
-| Input Parameter | Z-Component | Floating Point Numbers |  |
-| Output Parameter | 3D Vector | 3D Vector |  |
-
-## **5. Logarithm Operation**
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | X-Component (Thành phần X) | Floating Point Numbers (Số thực) |  |
+| Input Parameter (Đầu vào) | Y-Component (Thành phần Y) | Floating Point Numbers (Số thực) |  |
+| Input Parameter (Đầu vào) | Z-Component (Thành phần Z) | Floating Point Numbers (Số thực) |  |
+| Output Parameter (Đầu ra) | 3D Vector (Vector 3D) | 3D Vector (Vector 3D) |  |
+## **5. Logarithm Operation (Phép logarit)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Calculates the logarithm of the argument with the specified base
+Tính logarit của đối số với cơ số được chỉ định.
 
-The base should not be negative or equal to 1, and the argument should not be negative, otherwise illegal values may be generated
+**Lưu ý**: Cơ số không được âm hoặc bằng 1, và đối số không được âm; nếu không sẽ sinh ra giá trị bất hợp pháp.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Real Number | Floating Point Numbers |  |
-| Input Parameter | Base | Floating Point Numbers |  |
-| Output Parameter | Result | Floating Point Numbers |  |
-
-## **6. Arccosine Function**
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Real Number (Số thực) | Floating Point Numbers (Số thực) |  |
+| Input Parameter (Đầu vào) | Base (Cơ số) | Floating Point Numbers (Số thực) |  |
+| Output Parameter (Đầu ra) | Result (Kết quả) | Floating Point Numbers (Số thực) |  |
+## **6. Arccosine Function (Hàm arccosine)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Calculates the arccosine of the input and returns the value in radians
+Tính arccosine của đầu vào và trả về giá trị theo radian.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Input | Floating Point Numbers |  |
-| Output Parameter | Radian | Floating Point Numbers |  |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Input (Đầu vào) | Floating Point Numbers (Số thực) |  |
+| Output Parameter (Đầu ra) | Radian (Radian) | Floating Point Numbers (Số thực) |  |
 
-## **7. Arctangent Function**
+## **7. Arctangent Function (Hàm arctangent)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Calculates the arctangent of the input and returns the value in radians
+Tính arctangent của đầu vào và trả về giá trị theo radian.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Input | Floating Point Numbers |  |
-| Output Parameter | Radian | Floating Point Numbers |  |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Input (Đầu vào) | Floating Point Numbers (Số thực) |  |
+| Output Parameter (Đầu ra) | Radian (Radian) | Floating Point Numbers (Số thực) |  |
 
-## **8. Arcsine Function**
+## **8. Arcsine Function (Hàm arcsine)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Calculates the arcsine of the input and returns the value in radians
+Tính arcsine của đầu vào và trả về giá trị theo radian.
 
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Input | Floating Point Numbers |  |
-| Output Parameter | Radian | Floating Point Numbers |  |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Input (Đầu vào) | Floating Point Numbers (Số thực) |  |
+| Output Parameter (Đầu ra) | Radian (Radian) | Floating Point Numbers (Số thực) |  |
 
-## **9. Range Limiting Operation**
+## **9. Range Limiting Operation (Giới hạn phạm vi)**
 
 ![]()
 
-**Node Functions**
+**Node Functions (Chức năng Node)**
 
-Clamps the input value to the range [lower limit, upper limit] (both bounds inclusive) and outputs the result
+Giới hạn giá trị đầu vào vào khoảng `[lower limit, upper limit]` (cả hai giới hạn đều bao gồm). Nếu giá trị đầu vào nằm trong khoảng, trả về giá trị gốc; nếu thấp hơn giới hạn dưới, trả về giới hạn dưới; nếu cao hơn giới hạn trên, trả về giới hạn trên. Nếu giới hạn dưới lớn hơn giới hạn trên, coi đầu vào không hợp lệ và trả về giá trị bất hợp pháp.
 
-
-
-If the input falls within [lower limit, upper limit], returns the original value
-
-
-
-If the input is below the lower limit, returns the lower limit; if it exceeds the upper limit, returns the upper limit
-
-
-
-If the lower limit is greater than the upper limit, treats the input as invalid and returns an illegal value
-
-**Node Parameters**
+**Node Parameters (Tham số Node)**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
-| **Parameter Type** | **Parameter Name** | **Type** | **Description** |
-| Input Parameter | Input | Generic |  |
-| Input Parameter | Lower Limit | Generic |  |
+| **Parameter Type (Loại)** | **Parameter Name (Tên tham số)** | **Type (Kiểu dữ liệu)** | **Description (Mô tả)** |
+| Input Parameter (Đầu vào) | Input (Đầu vào) | Generic (Chung) |  |
+| Input Parameter (Đầu vào) | Lower Limit (Giới hạn dưới) | Generic (Chung) |  |
+| Input Parameter (Đầu vào) | Upper Limit (Giới hạn trên) | Generic (Chung) |  |
+| Output Parameter (Đầu ra) | Result (Kết quả) | Generic (Chung) |  |
 | Input Parameter | Upper Limit | Generic |  |
 | Output Parameter | Result | Generic |  |
 
@@ -255,7 +245,7 @@ If the lower limit is greater than the upper limit, treats the input as invalid 
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
 Converts the Forward Vector and Upward Vector to Euler Angles
 
@@ -263,7 +253,7 @@ Example: For a Character, suppose it has an initial orientation in 3D space. To 
 
 Note: Ensure the Forward and Upward Vectors are normalized. Using non-normalized vectors can produce unintended scaling and inaccurate rotation results.
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -272,15 +262,15 @@ Note: Ensure the Forward and Upward Vectors are normalized. Using non-normalized
 | Input Parameter | Upward Vector | 3D Vector | Defines the Unit's Up direction (used to determine the rotation angle). Default is the positive Y-axis of the World Coordinate System |
 | Output Parameter | Rotate | 3D Vector | Returns Euler Angles, where each component represents:  X – Pitch: Rotation around the local X-axis (right). Controls looking up and down.  Y – Yaw: Rotation around the local Y-axis (up). Controls turning left and right.  Z – Roll: Rotation around the local Z-axis (forward). Controls tilting the object side to side. |
 
-## **11. Calculate Timestamp From Formatted Time**
+## **11. Chuyển đổi thời gian đã định dạng sang dấu thời gian**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Converts a formatted time to a timestamp
+Chuyển đổi thời gian đã định dạng sang dấu thời gian
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -293,15 +283,15 @@ Converts a formatted time to a timestamp
 | Input Parameter | Second | Integer |  |
 | Output Parameter | Timestamp | Integer |  |
 
-## **12. Calculate Formatted Time From Timestamp**
+## **12. Chuyển đổi dấu thời gian sang thời gian đã định dạng**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Converts a timestamp to formatted time
+Chuyển đổi dấu thời gian sang thời gian đã định dạng
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -314,15 +304,15 @@ Converts a timestamp to formatted time
 | Output Parameter | Minute | Integer |  |
 | Output Parameter | Second | Integer |  |
 
-## **13. Calculate Day of the Week From Timestamp**
+## **13. Tính ngày trong tuần từ dấu thời gian**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Converts a timestamp to the day of the week
+Chuyển đổi dấu thời gian sang ngày trong tuần
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -330,15 +320,15 @@ Converts a timestamp to the day of the week
 | Input Parameter | Timestamp | Integer |  |
 | Output Parameter | Weekday | Integer |  |
 
-## **14. Radians to Degrees**
+## **14. Radian sang Độ**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Converts radians to degrees
+Chuyển đổi radian sang độ
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -346,15 +336,15 @@ Converts radians to degrees
 | Input Parameter | Radian Value | Floating Point Numbers |  |
 | Output Parameter | Angle Value | Floating Point Numbers |  |
 
-## **15. Addition**
+## **15. Phép cộng**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Adds two Floating Point Numbers or Integers
+Cộng hai số thực hoặc số nguyên
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -363,15 +353,15 @@ Adds two Floating Point Numbers or Integers
 | Input Parameter |  | Generic |  |
 | Output Parameter | Result | Generic |  |
 
-## **16. Subtraction**
+## **16. Phép trừ**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Subtracts two Floating Point Numbers or Integers
+Trừ hai số thực hoặc số nguyên
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -380,15 +370,15 @@ Subtracts two Floating Point Numbers or Integers
 | Input Parameter |  | Generic |  |
 | Output Parameter | Result | Generic |  |
 
-## **17. Degrees to Radians**
+## **17. Độ sang Radian**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Converts degrees to radians
+Chuyển đổi độ sang radian
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -396,15 +386,15 @@ Converts degrees to radians
 | Input Parameter | Angle Value | Floating Point Numbers |  |
 | Output Parameter | Radian Value | Floating Point Numbers |  |
 
-## **18. Take Larger Value**
+## **18. Lấy Giá trị Lớn hơn**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Returns the larger of two inputs
+Trả về giá trị lớn hơn trong hai đầu vào
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -413,15 +403,15 @@ Returns the larger of two inputs
 | Input Parameter | Input 2 | Generic |  |
 | Output Parameter | Larger Value | Generic |  |
 
-## **19. Take Smaller Value**
+## **19. Lấy Giá trị Nhỏ hơn**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Returns the smaller of two inputs
+Trả về giá trị nhỏ hơn trong hai đầu vào
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -430,15 +420,15 @@ Returns the smaller of two inputs
 | Input Parameter | Input 2 | Generic |  |
 | Output Parameter | Smaller Value | Generic |  |
 
-## **20. Absolute Value Operation**
+## **20. Phép lấy Giá trị Tuyệt đối**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Returns the absolute value of the input
+Trả về giá trị tuyệt đối của đầu vào
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -446,15 +436,15 @@ Returns the absolute value of the input
 | Input Parameter | Input | Generic |  |
 | Output Parameter | Result | Generic |  |
 
-## **21. Distance Between Two Coordinate Points**
+## **21. Khoảng cách giữa Hai Điểm Tọa độ**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Calculates the Euclidean distance between two coordinates
+Tính khoảng cách Euclid giữa hai tọa độ
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -463,15 +453,15 @@ Calculates the Euclidean distance between two coordinates
 | Input Parameter | Coordinate Point 2 | 3D Vector |  |
 | Output Parameter | Distance | Floating Point Numbers |  |
 
-## **22. Logical NOT Operation**
+## **22. Phép NOT Logic**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Performs a logical NOT operation on the input Boolean value and returns the result
+Thực hiện phép NOT logic trên giá trị Boolean đầu vào và trả về kết quả
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -479,15 +469,15 @@ Performs a logical NOT operation on the input Boolean value and returns the resu
 | Input Parameter | Input | Boolean |  |
 | Output Parameter | Result | Boolean |  |
 
-## **23. Logical OR Operation**
+## **23. Phép OR Logic**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Performs a logical OR operation on the two input Boolean values and returns the result
+Thực hiện phép OR logic trên hai giá trị Boolean đầu vào và trả về kết quả
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -496,15 +486,15 @@ Performs a logical OR operation on the two input Boolean values and returns the 
 | Input Parameter | Input 2 | Boolean |  |
 | Output Parameter | Result | Boolean |  |
 
-## **24. Logical XOR Operation**
+## **24. Phép XOR Logic**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Performs a logical XOR operation on the two input Boolean values and returns the result
+Thực hiện phép XOR logic trên hai giá trị Boolean đầu vào và trả về kết quả
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -513,15 +503,15 @@ Performs a logical XOR operation on the two input Boolean values and returns the
 | Input Parameter | Input 2 | Boolean |  |
 | Output Parameter | Result | Boolean |  |
 
-## **25. Logical AND Operation**
+## **25. Phép AND Logic**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Performs a logical AND operation on the two input Boolean values and returns the result
+Thực hiện phép AND logic trên hai giá trị Boolean đầu vào và trả về kết quả
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -530,15 +520,15 @@ Performs a logical AND operation on the two input Boolean values and returns the
 | Input Parameter | Input 2 | Boolean |  |
 | Output Parameter | Result | Boolean |  |
 
-## **26. Exponentiation**
+## **26. Lũy thừa**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Raises the base to the given exponent and returns the result
+Nâng cơ số lên mức lũy thừa cho trước và trả về kết quả
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -547,15 +537,15 @@ Raises the base to the given exponent and returns the result
 | Input Parameter | Exponent | Generic |  |
 | Output Parameter | Result | Generic |  |
 
-## **27. Modulo Operation**
+## **27. Phép modulo**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Returns the result of input 1 modulo input 2, with input 1 as the dividend
+Trả về kết quả của input 1 modulo input 2, với input 1 là số chia
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -564,15 +554,15 @@ Returns the result of input 1 modulo input 2, with input 1 as the dividend
 | Input Parameter |  | Integer |  |
 | Output Parameter | Result | Integer |  |
 
-## **28. Arithmetic Square Root Operation**
+## **28. Phép căn bậc hai**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Returns the arithmetic square root of the input value
+Trả về căn bậc hai của giá trị đầu vào
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -580,19 +570,19 @@ Returns the arithmetic square root of the input value
 | Input Parameter | Input | Floating Point Numbers |  |
 | Output Parameter | Result | Floating Point Numbers |  |
 
-## **29. Sign Operation**
+## **29. Phép xác định dấu**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-When the input is positive, returns 1
+Khi đầu vào dương, trả về 1
 
-When the input is negative, returns -1
+Khi đầu vào âm, trả về -1
 
-When the input is 0, returns 0
+Khi đầu vào bằng 0, trả về 0
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -600,15 +590,15 @@ When the input is 0, returns 0
 | Input Parameter | Input | Generic |  |
 | Output Parameter | Result | Generic |  |
 
-## **30. Round to Integer Operation**
+## **30. Phép làm tròn tới số nguyên**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Performs a rounding operation based on the rounding method and returns the rounded positive number
+Thực hiện phép làm tròn dựa trên phương pháp làm tròn và trả về số nguyên đã làm tròn
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -617,15 +607,15 @@ Performs a rounding operation based on the rounding method and returns the round
 | Input Parameter | Rounding Mode | Enumeration | Round: Rounds to the nearest integer according to standard rules  Round Up: Returns the smallest integer greater than the input value. For example: input 1.2 → 2; input −2.3 → −2  Round Down: Returns the largest integer smaller than the input value. For example: input 1.2 → 1; input −2.3 → −3  Truncate: Removes the decimal part of the floating point number (rounds toward zero). For example: input 1.2 → 1; input −2.3 → −2 |
 | Output Parameter | Result | Integer |  |
 
-## **31. 3D Vector Normalization**
+## **31. Chuẩn hoá Vector 3D**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Normalizes the length of a 3D Vector and outputs the result
+Chuẩn hoá độ dài của Vector 3D và xuất ra kết quả
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -633,15 +623,15 @@ Normalizes the length of a 3D Vector and outputs the result
 | Input Parameter | 3D Vector | 3D Vector |  |
 | Output Parameter | Result | 3D Vector |  |
 
-## **32. 3D Vector Addition**
+## **32. Cộng Vector 3D**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Calculates the sum of two 3D Vectors
+Tính tổng của hai Vector 3D
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -650,15 +640,15 @@ Calculates the sum of two 3D Vectors
 | Input Parameter | 3D Vector 2 | 3D Vector |  |
 | Output Parameter | Result | 3D Vector |  |
 
-## **33. 3D Vector Angle**
+## **33. Góc Vector 3D**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Calculates the angle between two 3D Vectors and outputs it in radians
+Tính góc giữa hai Vector 3D và xuất ra dưới dạng radian
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -667,15 +657,15 @@ Calculates the angle between two 3D Vectors and outputs it in radians
 | Input Parameter | 3D Vector 2 | 3D Vector |  |
 | Output Parameter | Angle (Radians) | Floating Point Numbers |  |
 
-## **34. 3D Vector Subtraction**
+## **34. Trừ Vector 3D**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Calculates the difference of two 3D Vectors
+Tính hiệu của hai Vector 3D
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -684,15 +674,15 @@ Calculates the difference of two 3D Vectors
 | Input Parameter | 3D Vector 2 | 3D Vector |  |
 | Output Parameter | Result | 3D Vector |  |
 
-## **35. 3D Vector Modulo Operation**
+## **35. Độ dài Vector 3D**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Calculates the magnitude of the input 3D Vector
+Tính độ lớn (magnitude) của Vector 3D đầu vào
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -700,15 +690,15 @@ Calculates the magnitude of the input 3D Vector
 | Input Parameter | 3D Vector | 3D Vector |  |
 | Output Parameter | Result | Floating Point Numbers |  |
 
-## **36. 3D Vector Dot Product**
+## **36. Tích vô hướng Vector 3D**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Calculates the dot product of two input 3D Vectors
+Tính tích vô hướng của hai Vector 3D đầu vào
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -717,15 +707,15 @@ Calculates the dot product of two input 3D Vectors
 | Input Parameter | 3D Vector 2 | 3D Vector |  |
 | Output Parameter | Result | Floating Point Numbers |  |
 
-## **37. 3D Vector Zoom**
+## **37. Phép nhân vô hướng Vector 3D**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Scales the input 3D Vector (scalar multiplication) and outputs the result
+Phóng đại Vector 3D đầu vào (phép nhân vô hướng) và xuất ra kết quả
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -734,15 +724,15 @@ Scales the input 3D Vector (scalar multiplication) and outputs the result
 | Input Parameter | Zoom Multiplier | Floating Point Numbers |  |
 | Output Parameter | Result | 3D Vector |  |
 
-## **38. 3D Vector Cross Product**
+## **38. Tích có hướng Vector 3D**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Calculates the cross product of two 3D Vectors
+Tính tích có hướng của hai Vector 3D
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -751,17 +741,17 @@ Calculates the cross product of two 3D Vectors
 | Input Parameter | 3D Vector 2 | 3D Vector |  |
 | Output Parameter | Result | 3D Vector |  |
 
-## **39. 3D Vector Rotation**
+## **39. Quay Vector 3D**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Rotates the input 3D Vector by the Euler Angles specified by the rotation and returns the result
+Xoay Vector 3D đầu vào theo các góc Euler được chỉ định và trả về kết quả
 
 Note: The Rotated 3D Vector is the one you want to rotate. The Rotated Euler Angles define how the vector should be rotated. The resulting output vector shows the position of the original 3D Vector after applying the rotation.
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -770,15 +760,15 @@ Note: The Rotated 3D Vector is the one you want to rotate. The Rotated Euler Ang
 | Input Parameter | Rotated 3D Vector | 3D Vector |  |
 | Output Parameter | Result | 3D Vector |  |
 
-## **40. Greater Than**
+## **40. Lớn hơn**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Returns whether the left value is greater than the right value
+Trả về liệu giá trị bên trái có lớn hơn giá trị bên phải hay không
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -787,15 +777,15 @@ Returns whether the left value is greater than the right value
 | Input Parameter | Right Value | Generic |  |
 | Output Parameter | Result | Boolean |  |
 
-## **41. Greater Than or Equal To**
+## **41. Lớn hơn hoặc bằng**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Returns whether the left value is greater than or equal to the right value
+Trả về liệu giá trị bên trái có lớn hơn hoặc bằng giá trị bên phải hay không
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -804,15 +794,15 @@ Returns whether the left value is greater than or equal to the right value
 | Input Parameter | Right Value | Generic |  |
 | Output Parameter | Result | Boolean |  |
 
-## **42. Less Than**
+## **42. Nhỏ hơn**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Returns whether the left value is less than the right value
+Trả về liệu giá trị bên trái có nhỏ hơn giá trị bên phải hay không
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -821,15 +811,15 @@ Returns whether the left value is less than the right value
 | Input Parameter | Right Value | Generic |  |
 | Output Parameter | Result | Boolean |  |
 
-## **43. Less Than or Equal To**
+## **43. Nhỏ hơn hoặc bằng**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Returns whether the left value is less than or equal to the right value
+Trả về liệu giá trị bên trái có nhỏ hơn hoặc bằng giá trị bên phải hay không
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -838,15 +828,15 @@ Returns whether the left value is less than or equal to the right value
 | Input Parameter | Right Value | Generic |  |
 | Output Parameter | Result | Boolean |  |
 
-## **44. Cosine Function**
+## **44. Hàm cosin**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Calculates the cosine of the input in radians
+Tính giá trị cosin của đầu vào tính bằng radian
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -854,15 +844,15 @@ Calculates the cosine of the input in radians
 | Input Parameter | Radian | Floating Point Numbers |  |
 | Output Parameter | Result | Floating Point Numbers |  |
 
-## **45. Tangent Function**
+## **45. Hàm tang**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Calculates the tangent of the input in radians
+Tính giá trị tang của đầu vào tính bằng radian
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -870,15 +860,15 @@ Calculates the tangent of the input in radians
 | Input Parameter | Radian | Floating Point Numbers |  |
 | Output Parameter | Result | Floating Point Numbers |  |
 
-## **46. Sine Function**
+## **46. Hàm sin**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Calculates the sine of the input in radians
+Tính giá trị sin của đầu vào tính bằng radian
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -886,15 +876,15 @@ Calculates the sine of the input in radians
 | Input Parameter | Radian | Floating Point Numbers |  |
 | Output Parameter | Result | Floating Point Numbers |  |
 
-## **47. Left Shift Operation**
+## **47. Phép dịch trái**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Performs a logical left shift on the input by the specified bit count and outputs the result
+Thực hiện phép dịch trái logic trên đầu vào với số bit được chỉ định và xuất ra kết quả
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -903,17 +893,17 @@ Performs a logical left shift on the input by the specified bit count and output
 | Input Parameter | Left Shift Count | Integer |  |
 | Output Parameter | Result | Integer |  |
 
-## **48. Right Shift Operation**
+## **48. Phép dịch phải**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Performs a logical right shift on the input by the specified bit count and outputs the result
+Thực hiện phép dịch phải logic trên đầu vào với số bit được chỉ định và xuất ra kết quả
 
-Performs an arithmetic right shift, preserving the sign bit
+Thực hiện phép dịch phải số học, giữ nguyên bit dấu
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -922,15 +912,15 @@ Performs an arithmetic right shift, preserving the sign bit
 | Input Parameter | Right Shift Count | Integer |  |
 | Output Parameter | Result | Integer |  |
 
-## **49. Bitwise AND**
+## **49. Phép AND bitwise**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Performs a bitwise AND operation on the two inputs and returns the result
+Thực hiện phép AND bitwise trên hai đầu vào và trả về kết quả
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -939,15 +929,15 @@ Performs a bitwise AND operation on the two inputs and returns the result
 | Input Parameter | Value 2 | Integer |  |
 | Output Parameter | Result | Integer |  |
 
-## **50. Bitwise OR**
+## **50. Phép OR bitwise**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Performs a bitwise OR operation on the two inputs and returns the result
+Thực hiện phép OR bitwise trên hai đầu vào và trả về kết quả
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -956,15 +946,15 @@ Performs a bitwise OR operation on the two inputs and returns the result
 | Input Parameter | Value 2 | Integer |  |
 | Output Parameter | Result | Integer |  |
 
-## **51. XOR (Exclusive OR)**
+## **51. Phép XOR (Exclusive OR)**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Performs a bitwise XOR operation on the two inputs and returns the result
+Thực hiện phép XOR bitwise trên hai đầu vào và trả về kết quả
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -973,15 +963,15 @@ Performs a bitwise XOR operation on the two inputs and returns the result
 | Input Parameter | Value 2 | Integer |  |
 | Output Parameter | Result | Integer |  |
 
-## **52. Bitwise Complement**
+## **52. Phủ định bitwise**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Performs a bitwise complement operation on the input and returns the result
+Thực hiện phép phủ định bitwise trên đầu vào và trả về kết quả
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -989,19 +979,19 @@ Performs a bitwise complement operation on the input and returns the result
 | Input Parameter | Value | Integer |  |
 | Output Parameter | Result | Integer |  |
 
-## **53. Write by bit**
+## **53. Ghi bằng bit**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Writes the write value as a binary number to the [start bit, end bit] of the target value (also a binary number). The start bit is indexed from 0, and the write length includes both the start and end bits
+Ghi giá trị cần ghi dưới dạng nhị phân vào các bit [bắt đầu, kết thúc] của giá trị mục tiêu (cũng là số nhị phân). Bit bắt đầu được đánh chỉ số từ 0, và độ dài ghi bao gồm cả bit bắt đầu và kết thúc
 
-If the binary significant length of the write value (counted from the first 1 from the left) exceeds the write length, the write fails and returns the original value
+Nếu độ dài nhị phân có ý nghĩa của giá trị ghi (đếm từ 1 đầu tiên bên trái) vượt quá độ dài ghi, thao tác ghi sẽ thất bại và trả về giá trị gốc
 
-If the write value is negative, it also fails due to exceeding the write length (the first bit of a negative number's binary representation is the sign bit 1)
+Nếu giá trị ghi là số âm, cũng sẽ thất bại do vượt quá độ dài ghi (bit đầu tiên của biểu diễn nhị phân số âm là bit dấu 1)
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -1012,15 +1002,15 @@ If the write value is negative, it also fails due to exceeding the write length 
 | Input Parameter | Write end position | Integer |  |
 | Output Parameter | Result | Integer |  |
 
-## **54. Read by bit**
+## **54. Đọc bằng bit**
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
-Reads the value from [start bit, end bit] of the value (in binary representation)
+Đọc giá trị từ các bit [bắt đầu, kết thúc] của giá trị (trong dạng biểu diễn nhị phân)
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -1036,7 +1026,7 @@ Reads the value from [start bit, end bit] of the value (in binary representation
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
 Creates Key-Value Pairs sequentially from the input key and value lists
 
@@ -1044,7 +1034,7 @@ This node builds the Dictionary using the shorter of the key and value lists; ex
 
 If duplicate keys are found in the key list, creation fails and returns an empty Dictionary
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -1057,11 +1047,11 @@ If duplicate keys are found in the key list, creation fails and returns an empty
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
 Combines up to 50 Key-Value Pairs into one Dictionary
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -1076,11 +1066,11 @@ Combines up to 50 Key-Value Pairs into one Dictionary
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
 Returns all parameters of the specified Structure
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -1091,11 +1081,11 @@ Returns all parameters of the specified Structure
 
 ![]()
 
-**Node Functions**
+**Chức năng Node**
 
 Combines multiple parameters into a single Structure-type value
 
-**Node Parameters**
+**Tham số Node**
 
 |  |  |  |  |
 | --- | --- | --- | --- |
